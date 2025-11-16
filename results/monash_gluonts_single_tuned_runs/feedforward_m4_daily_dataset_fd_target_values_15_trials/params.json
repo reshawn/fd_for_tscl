@@ -1,0 +1,1 @@
+{"num_layers": 2, "hidden_dim_0": 100, "hidden_dim_1": 43, "trainer:learning_rate": 0.00025515131408060263, "trainer:epochs": 41, "num_hidden_dimensions": [100, 43]}

@@ -1,0 +1,13 @@
+{
+        "transformer":{
+            'model_dim_num_heads_pair': (96, 2),
+            'inner_ff_dim_scale': 3, 
+            'embedding_dimension': 3, 
+            'dropout_rate': 0.3733903176629327, 
+            'trainer:learning_rate': 1.1662591700164291e-06, 
+            'trainer:epochs': 50, 
+            'ctx': 'gpu(0)', 
+            'model_dim': 96, 
+            'num_heads': 2
+        }
+}

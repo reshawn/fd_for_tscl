@@ -1,0 +1,1 @@
+{"model_dim_num_heads_pair": [42, 6], "inner_ff_dim_scale": 1, "embedding_dimension": 4, "dropout_rate": 0.35751736332825734, "trainer:learning_rate": 0.0002357745561883554, "trainer:epochs": 31, "model_dim": 42, "num_heads": 6, "mase_mean": 2.355935513350109, "mase_std": 0.0, "smape_mean": 0.01069766389472144, "smape_std": 0.0}

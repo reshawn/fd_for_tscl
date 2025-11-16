@@ -1,0 +1,12 @@
+{
+        "m4_daily_dataset":{
+            "freq":"D",
+            "prediction_length":14,
+            "context_length":90,
+        },
+        "sp500":{
+            "freq":"5T",
+            "prediction_length":78, # 12 - next hour, 78 - rest of day
+            "context_length":390,
+        }
+}

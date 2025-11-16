@@ -1,0 +1,618 @@
+Running measurements with params: format=First_Order_Diff,chunk_size=50000, cold_start_size=10000, num_runs=10,        dataset_name=sp500, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Optimal number of components according to BIC: 10
+Tuning run 0.0 of 17.449
+Optimization Time: 0.4970497984166665 minutes
+Training run 0.0 of 17.449
+Run 0 Accuracy: 0.5515
+Run 1 Accuracy: 0.5515
+Run 2 Accuracy: 0.5515
+Run 3 Accuracy: 0.5515
+Run 4 Accuracy: 0.5515
+Run 5 Accuracy: 0.5515
+Run 6 Accuracy: 0.5515
+Run 7 Accuracy: 0.5515
+Run 8 Accuracy: 0.5515
+Run 9 Accuracy: 0.5515
+Optimal number of components according to BIC: 10
+Tuning run 1.0 of 17.449
+Optimization Time: 0.8980187279833335 minutes
+Training run 1.0 of 17.449
+Run 0 Accuracy: 0.5421
+Run 1 Accuracy: 0.5421
+Run 2 Accuracy: 0.5421
+Run 3 Accuracy: 0.5421
+Run 4 Accuracy: 0.5421
+Run 5 Accuracy: 0.5421
+Run 6 Accuracy: 0.5421
+Run 7 Accuracy: 0.5421
+Run 8 Accuracy: 0.5421
+Run 9 Accuracy: 0.5421
+Optimal number of components according to BIC: 10
+Tuning run 2.0 of 17.449
+Optimization Time: 1.354602577033333 minutes
+Training run 2.0 of 17.449
+Run 0 Accuracy: 0.4961
+Run 1 Accuracy: 0.4961
+Run 2 Accuracy: 0.4961
+Run 3 Accuracy: 0.4961
+Run 4 Accuracy: 0.4961
+Run 5 Accuracy: 0.4961
+Run 6 Accuracy: 0.4961
+Run 7 Accuracy: 0.4961
+Run 8 Accuracy: 0.4961
+Run 9 Accuracy: 0.4961
+Optimal number of components according to BIC: 8
+Tuning run 3.0 of 17.449
+Optimization Time: 1.4165262904500007 minutes
+Training run 3.0 of 17.449
+Run 0 Accuracy: 0.5141
+Run 1 Accuracy: 0.5141
+Run 2 Accuracy: 0.5141
+Run 3 Accuracy: 0.5141
+Run 4 Accuracy: 0.5141
+Run 5 Accuracy: 0.5141
+Run 6 Accuracy: 0.5141
+Run 7 Accuracy: 0.5141
+Run 8 Accuracy: 0.5141
+Run 9 Accuracy: 0.5141
+Optimal number of components according to BIC: 10
+Tuning run 4.0 of 17.449
+Optimization Time: 2.1990532575500006 minutes
+Training run 4.0 of 17.449
+Run 0 Accuracy: 0.5286
+Run 1 Accuracy: 0.5286
+Run 2 Accuracy: 0.5286
+Run 3 Accuracy: 0.5286
+Run 4 Accuracy: 0.5286
+Run 5 Accuracy: 0.5286
+Run 6 Accuracy: 0.5286
+Run 7 Accuracy: 0.5286
+Run 8 Accuracy: 0.5286
+Run 9 Accuracy: 0.5286
+Optimal number of components according to BIC: 10
+Tuning run 5.0 of 17.449
+Optimization Time: 3.150825157183334 minutes
+Training run 5.0 of 17.449
+Run 0 Accuracy: 0.5405
+Run 1 Accuracy: 0.5405
+Run 2 Accuracy: 0.5405
+Run 3 Accuracy: 0.5405
+Run 4 Accuracy: 0.5405
+Run 5 Accuracy: 0.5405
+Run 6 Accuracy: 0.5405
+Run 7 Accuracy: 0.5405
+Run 8 Accuracy: 0.5405
+Run 9 Accuracy: 0.5405
+Optimal number of components according to BIC: 10
+Tuning run 6.0 of 17.449
+Optimization Time: 2.569305466800002 minutes
+Training run 6.0 of 17.449
+Run 0 Accuracy: 0.5319
+Run 1 Accuracy: 0.5319
+Run 2 Accuracy: 0.5319
+Run 3 Accuracy: 0.5319
+Run 4 Accuracy: 0.5319
+Run 5 Accuracy: 0.5319
+Run 6 Accuracy: 0.5319
+Run 7 Accuracy: 0.5319
+Run 8 Accuracy: 0.5319
+Run 9 Accuracy: 0.5319
+Optimal number of components according to BIC: 9
+Tuning run 7.0 of 17.449
+Optimization Time: 4.348379838583332 minutes
+Training run 7.0 of 17.449
+Run 0 Accuracy: 0.5338
+Run 1 Accuracy: 0.5338
+Run 2 Accuracy: 0.5338
+Run 3 Accuracy: 0.5338
+Run 4 Accuracy: 0.5338
+Run 5 Accuracy: 0.5338
+Run 6 Accuracy: 0.5338
+Run 7 Accuracy: 0.5338
+Run 8 Accuracy: 0.5338
+Run 9 Accuracy: 0.5338
+Optimal number of components according to BIC: 10
+Tuning run 8.0 of 17.449
+Optimization Time: 5.35075326995 minutes
+Training run 8.0 of 17.449
+Run 0 Accuracy: 0.5411
+Run 1 Accuracy: 0.5411
+Run 2 Accuracy: 0.5411
+Run 3 Accuracy: 0.5411
+Run 4 Accuracy: 0.5411
+Run 5 Accuracy: 0.5411
+Run 6 Accuracy: 0.5411
+Run 7 Accuracy: 0.5411
+Run 8 Accuracy: 0.5411
+Run 9 Accuracy: 0.5411
+Optimal number of components according to BIC: 10
+Tuning run 9.0 of 17.449
+Optimization Time: 6.052831074049997 minutes
+Training run 9.0 of 17.449
+Run 0 Accuracy: 0.5290
+Run 1 Accuracy: 0.5290
+Run 2 Accuracy: 0.5290
+Run 3 Accuracy: 0.5290
+Run 4 Accuracy: 0.5290
+Run 5 Accuracy: 0.5290
+Run 6 Accuracy: 0.5290
+Run 7 Accuracy: 0.5290
+Run 8 Accuracy: 0.5290
+Run 9 Accuracy: 0.5290
+Optimal number of components according to BIC: 10
+Tuning run 10.0 of 17.449
+Optimization Time: 6.76064576685 minutes
+Training run 10.0 of 17.449
+Run 0 Accuracy: 0.5208
+Run 1 Accuracy: 0.5208
+Run 2 Accuracy: 0.5208
+Run 3 Accuracy: 0.5208
+Run 4 Accuracy: 0.5208
+Run 5 Accuracy: 0.5208
+Run 6 Accuracy: 0.5208
+Run 7 Accuracy: 0.5208
+Run 8 Accuracy: 0.5208
+Run 9 Accuracy: 0.5208
+Optimal number of components according to BIC: 10
+Tuning run 11.0 of 17.449
+Optimization Time: 7.1379106711 minutes
+Training run 11.0 of 17.449
+Run 0 Accuracy: 0.5136
+Run 1 Accuracy: 0.5136
+Run 2 Accuracy: 0.5136
+Run 3 Accuracy: 0.5136
+Run 4 Accuracy: 0.5136
+Run 5 Accuracy: 0.5136
+Run 6 Accuracy: 0.5136
+Run 7 Accuracy: 0.5136
+Run 8 Accuracy: 0.5136
+Run 9 Accuracy: 0.5136
+Optimal number of components according to BIC: 10
+Tuning run 12.0 of 17.449
+Optimization Time: 5.616180977233323 minutes
+Training run 12.0 of 17.449
+Run 0 Accuracy: 0.5211
+Run 1 Accuracy: 0.5211
+Run 2 Accuracy: 0.5211
+Run 3 Accuracy: 0.5211
+Run 4 Accuracy: 0.5211
+Run 5 Accuracy: 0.5211
+Run 6 Accuracy: 0.5211
+Run 7 Accuracy: 0.5211
+Run 8 Accuracy: 0.5211
+Run 9 Accuracy: 0.5211
+Optimal number of components according to BIC: 10
+Tuning run 13.0 of 17.449
+Optimization Time: 10.043893205600003 minutes
+Training run 13.0 of 17.449
+Run 0 Accuracy: 0.5095
+Run 1 Accuracy: 0.5095
+Run 2 Accuracy: 0.5095
+Run 3 Accuracy: 0.5095
+Run 4 Accuracy: 0.5095
+Run 5 Accuracy: 0.5095
+Run 6 Accuracy: 0.5095
+Run 7 Accuracy: 0.5095
+Run 8 Accuracy: 0.5095
+Run 9 Accuracy: 0.5095
+Optimal number of components according to BIC: 10
+Tuning run 14.0 of 17.449
+Optimization Time: 9.014250482033336 minutes
+Training run 14.0 of 17.449
+Run 0 Accuracy: 0.5164
+Run 1 Accuracy: 0.5164
+Run 2 Accuracy: 0.5164
+Run 3 Accuracy: 0.5164
+Run 4 Accuracy: 0.5164
+Run 5 Accuracy: 0.5164
+Run 6 Accuracy: 0.5164
+Run 7 Accuracy: 0.5164
+Run 8 Accuracy: 0.5164
+Run 9 Accuracy: 0.5164
+Optimal number of components according to BIC: 10
+Tuning run 15.0 of 17.449
+Optimization Time: 7.6504713091000065 minutes
+Training run 15.0 of 17.449
+Run 0 Accuracy: 0.5159
+Run 1 Accuracy: 0.5159
+Run 2 Accuracy: 0.5159
+Run 3 Accuracy: 0.5159
+Run 4 Accuracy: 0.5159
+Run 5 Accuracy: 0.5159
+Run 6 Accuracy: 0.5159
+Run 7 Accuracy: 0.5159
+Run 8 Accuracy: 0.5159
+Run 9 Accuracy: 0.5159
+Optimal number of components according to BIC: 10
+Tuning run 16.0 of 17.449
+Optimization Time: 8.817027896716672 minutes
+Training run 16.0 of 17.449
+Run 0 Accuracy: 0.5326
+Run 1 Accuracy: 0.5326
+Run 2 Accuracy: 0.5326
+Run 3 Accuracy: 0.5326
+Run 4 Accuracy: 0.5326
+Run 5 Accuracy: 0.5326
+Run 6 Accuracy: 0.5326
+Run 7 Accuracy: 0.5326
+Run 8 Accuracy: 0.5326
+Run 9 Accuracy: 0.5326
+Optimal number of components according to BIC: 10
+Tuning run 17.0 of 17.449
+Optimization Time: 7.281457025433338 minutes
+Training run 17.0 of 17.449
+Run 0 Accuracy: 0.5176
+Run 1 Accuracy: 0.5176
+Run 2 Accuracy: 0.5176
+Run 3 Accuracy: 0.5176
+Run 4 Accuracy: 0.5176
+Run 5 Accuracy: 0.5176
+Run 6 Accuracy: 0.5176
+Run 7 Accuracy: 0.5176
+Run 8 Accuracy: 0.5176
+Run 9 Accuracy: 0.5176
+RUNNING CONSOLIDATION MEASURE
+Tuning run 0.0 of 17.449
+Optimization Time: 0.3748263660833497 minutes
+Generating chunk for run 0.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 0.0 of 17.449
+Run 0 Accuracy: 0.5515
+Run 1 Accuracy: 0.5515
+Run 2 Accuracy: 0.5515
+Run 3 Accuracy: 0.5515
+Run 4 Accuracy: 0.5515
+Run 5 Accuracy: 0.5515
+Run 6 Accuracy: 0.5515
+Run 7 Accuracy: 0.5515
+Run 8 Accuracy: 0.5515
+Run 9 Accuracy: 0.5515
+Tuning run 1.0 of 17.449
+Optimization Time: 1.3214949420166704 minutes
+Generating chunk for run 1.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 1.0 of 17.449
+Run 0 Accuracy: 0.5441
+Run 1 Accuracy: 0.5441
+Run 2 Accuracy: 0.5441
+Run 3 Accuracy: 0.5441
+Run 4 Accuracy: 0.5441
+Run 5 Accuracy: 0.5441
+Run 6 Accuracy: 0.5441
+Run 7 Accuracy: 0.5441
+Run 8 Accuracy: 0.5441
+Run 9 Accuracy: 0.5441
+Tuning run 2.0 of 17.449
+Optimization Time: 1.5290698591999898 minutes
+Generating chunk for run 2.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 2.0 of 17.449
+Run 0 Accuracy: 0.5509
+Run 1 Accuracy: 0.5509
+Run 2 Accuracy: 0.5509
+Run 3 Accuracy: 0.5509
+Run 4 Accuracy: 0.5509
+Run 5 Accuracy: 0.5509
+Run 6 Accuracy: 0.5509
+Run 7 Accuracy: 0.5509
+Run 8 Accuracy: 0.5509
+Run 9 Accuracy: 0.5509
+Tuning run 3.0 of 17.449
+Optimization Time: 1.7686792011999992 minutes
+Generating chunk for run 3.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 3.0 of 17.449
+Run 0 Accuracy: 0.5168
+Run 1 Accuracy: 0.5168
+Run 2 Accuracy: 0.5168
+Run 3 Accuracy: 0.5168
+Run 4 Accuracy: 0.5168
+Run 5 Accuracy: 0.5168
+Run 6 Accuracy: 0.5168
+Run 7 Accuracy: 0.5168
+Run 8 Accuracy: 0.5168
+Run 9 Accuracy: 0.5168
+Tuning run 4.0 of 17.449
+Optimization Time: 1.4984727130000162 minutes
+Generating chunk for run 4.0 of 17.449
+Optimal number of components according to BIC: 9
+Training run 4.0 of 17.449
+Run 0 Accuracy: 0.5422
+Run 1 Accuracy: 0.5422
+Run 2 Accuracy: 0.5422
+Run 3 Accuracy: 0.5422
+Run 4 Accuracy: 0.5422
+Run 5 Accuracy: 0.5422
+Run 6 Accuracy: 0.5422
+Run 7 Accuracy: 0.5422
+Run 8 Accuracy: 0.5422
+Run 9 Accuracy: 0.5422
+Tuning run 5.0 of 17.449
+Optimization Time: 3.8479526733999894 minutes
+Generating chunk for run 5.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 5.0 of 17.449
+Run 0 Accuracy: 0.5383
+Run 1 Accuracy: 0.5383
+Run 2 Accuracy: 0.5383
+Run 3 Accuracy: 0.5383
+Run 4 Accuracy: 0.5383
+Run 5 Accuracy: 0.5383
+Run 6 Accuracy: 0.5383
+Run 7 Accuracy: 0.5383
+Run 8 Accuracy: 0.5383
+Run 9 Accuracy: 0.5383
+Tuning run 6.0 of 17.449
+Optimization Time: 2.1898047933499885 minutes
+Generating chunk for run 6.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 6.0 of 17.449
+Run 0 Accuracy: 0.5397
+Run 1 Accuracy: 0.5397
+Run 2 Accuracy: 0.5397
+Run 3 Accuracy: 0.5397
+Run 4 Accuracy: 0.5397
+Run 5 Accuracy: 0.5397
+Run 6 Accuracy: 0.5397
+Run 7 Accuracy: 0.5397
+Run 8 Accuracy: 0.5397
+Run 9 Accuracy: 0.5397
+Tuning run 7.0 of 17.449
+Optimization Time: 7.783699490416651 minutes
+Generating chunk for run 7.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 7.0 of 17.449
+Run 0 Accuracy: 0.5434
+Run 1 Accuracy: 0.5434
+Run 2 Accuracy: 0.5434
+Run 3 Accuracy: 0.5434
+Run 4 Accuracy: 0.5434
+Run 5 Accuracy: 0.5434
+Run 6 Accuracy: 0.5434
+Run 7 Accuracy: 0.5434
+Run 8 Accuracy: 0.5434
+Run 9 Accuracy: 0.5434
+Tuning run 8.0 of 17.449
+Optimization Time: 8.96426718528334 minutes
+Generating chunk for run 8.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 8.0 of 17.449
+Run 0 Accuracy: 0.5177
+Run 1 Accuracy: 0.5177
+Run 2 Accuracy: 0.5177
+Run 3 Accuracy: 0.5177
+Run 4 Accuracy: 0.5177
+Run 5 Accuracy: 0.5177
+Run 6 Accuracy: 0.5177
+Run 7 Accuracy: 0.5177
+Run 8 Accuracy: 0.5177
+Run 9 Accuracy: 0.5177
+Tuning run 9.0 of 17.449
+Optimization Time: 5.978063751983337 minutes
+Generating chunk for run 9.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 9.0 of 17.449
+Run 0 Accuracy: 0.5354
+Run 1 Accuracy: 0.5354
+Run 2 Accuracy: 0.5354
+Run 3 Accuracy: 0.5354
+Run 4 Accuracy: 0.5354
+Run 5 Accuracy: 0.5354
+Run 6 Accuracy: 0.5354
+Run 7 Accuracy: 0.5354
+Run 8 Accuracy: 0.5354
+Run 9 Accuracy: 0.5354
+Tuning run 10.0 of 17.449
+Optimization Time: 5.572439843483335 minutes
+Generating chunk for run 10.0 of 17.449
+Optimal number of components according to BIC: 9
+Training run 10.0 of 17.449
+Run 0 Accuracy: 0.5378
+Run 1 Accuracy: 0.5378
+Run 2 Accuracy: 0.5378
+Run 3 Accuracy: 0.5378
+Run 4 Accuracy: 0.5378
+Run 5 Accuracy: 0.5378
+Run 6 Accuracy: 0.5378
+Run 7 Accuracy: 0.5378
+Run 8 Accuracy: 0.5378
+Run 9 Accuracy: 0.5378
+Tuning run 11.0 of 17.449
+Optimization Time: 4.193451475533341 minutes
+Generating chunk for run 11.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 11.0 of 17.449
+Run 0 Accuracy: 0.5231
+Run 1 Accuracy: 0.5231
+Run 2 Accuracy: 0.5231
+Run 3 Accuracy: 0.5231
+Run 4 Accuracy: 0.5231
+Run 5 Accuracy: 0.5231
+Run 6 Accuracy: 0.5231
+Run 7 Accuracy: 0.5231
+Run 8 Accuracy: 0.5231
+Run 9 Accuracy: 0.5231
+Tuning run 12.0 of 17.449
+Optimization Time: 5.664002492833333 minutes
+Generating chunk for run 12.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 12.0 of 17.449
+Run 0 Accuracy: 0.5209
+Run 1 Accuracy: 0.5209
+Run 2 Accuracy: 0.5209
+Run 3 Accuracy: 0.5209
+Run 4 Accuracy: 0.5209
+Run 5 Accuracy: 0.5209
+Run 6 Accuracy: 0.5209
+Run 7 Accuracy: 0.5209
+Run 8 Accuracy: 0.5209
+Run 9 Accuracy: 0.5209
+Tuning run 13.0 of 17.449
+Optimization Time: 2.303768374233338 minutes
+Generating chunk for run 13.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 13.0 of 17.449
+Run 0 Accuracy: 0.5225
+Run 1 Accuracy: 0.5225
+Run 2 Accuracy: 0.5225
+Run 3 Accuracy: 0.5225
+Run 4 Accuracy: 0.5225
+Run 5 Accuracy: 0.5225
+Run 6 Accuracy: 0.5225
+Run 7 Accuracy: 0.5225
+Run 8 Accuracy: 0.5225
+Run 9 Accuracy: 0.5225
+Tuning run 14.0 of 17.449
+Optimization Time: 5.500134343300003 minutes
+Generating chunk for run 14.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 14.0 of 17.449
+Run 0 Accuracy: 0.5225
+Run 1 Accuracy: 0.5225
+Run 2 Accuracy: 0.5225
+Run 3 Accuracy: 0.5225
+Run 4 Accuracy: 0.5225
+Run 5 Accuracy: 0.5225
+Run 6 Accuracy: 0.5225
+Run 7 Accuracy: 0.5225
+Run 8 Accuracy: 0.5225
+Run 9 Accuracy: 0.5225
+Tuning run 15.0 of 17.449
+Optimization Time: 5.801576549516661 minutes
+Generating chunk for run 15.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 15.0 of 17.449
+Run 0 Accuracy: 0.5141
+Run 1 Accuracy: 0.5141
+Run 2 Accuracy: 0.5141
+Run 3 Accuracy: 0.5141
+Run 4 Accuracy: 0.5141
+Run 5 Accuracy: 0.5141
+Run 6 Accuracy: 0.5141
+Run 7 Accuracy: 0.5141
+Run 8 Accuracy: 0.5141
+Run 9 Accuracy: 0.5141
+Tuning run 16.0 of 17.449
+Optimization Time: 7.300476904783348 minutes
+Generating chunk for run 16.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 16.0 of 17.449
+Run 0 Accuracy: 0.5134
+Run 1 Accuracy: 0.5134
+Run 2 Accuracy: 0.5134
+Run 3 Accuracy: 0.5134
+Run 4 Accuracy: 0.5134
+Run 5 Accuracy: 0.5134
+Run 6 Accuracy: 0.5134
+Run 7 Accuracy: 0.5134
+Run 8 Accuracy: 0.5134
+Run 9 Accuracy: 0.5134
+Tuning run 17.0 of 17.449
+Optimization Time: 8.393255024266667 minutes
+Generating chunk for run 17.0 of 17.449
+Optimal number of components according to BIC: 10
+Training run 17.0 of 17.449
+Run 0 Accuracy: 0.5084
+Run 1 Accuracy: 0.5084
+Run 2 Accuracy: 0.5084
+Run 3 Accuracy: 0.5084
+Run 4 Accuracy: 0.5084
+Run 5 Accuracy: 0.5084
+Run 6 Accuracy: 0.5084
+Run 7 Accuracy: 0.5084
+Run 8 Accuracy: 0.5084
+Run 9 Accuracy: 0.5084
+Runtime: 294.24541725715 minutes
+means: [0.55152 0.54208 0.49614 0.51414 0.52858 0.5405  0.5319  0.5338  0.5411
+ 0.52896 0.5208  0.51356 0.52114 0.5095  0.51642 0.51594 0.53258 0.5176 ], [0.55148 0.5441  0.55086 0.51678 0.5422  0.5383  0.53968 0.5434  0.51774
+ 0.5354  0.53782 0.52312 0.52092 0.52252 0.5225  0.51412 0.51344 0.50844], std: [0.00000000e+00 1.11022302e-16 1.11022302e-16 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 1.11022302e-16 1.11022302e-16 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 1.11022302e-16
+ 0.00000000e+00 0.00000000e+00], [0.00000000e+00 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 1.11022302e-16 1.11022302e-16 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 1.11022302e-16
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00], timestamps: [Timestamp('2005-09-30 09:35:00-0400', tz='America/New_York')
+ Timestamp('2007-04-04 07:35:00-0400', tz='America/New_York')
+ Timestamp('2008-07-11 14:15:00-0400', tz='America/New_York')
+ Timestamp('2009-09-03 15:20:00-0400', tz='America/New_York')
+ Timestamp('2010-10-28 19:50:00-0400', tz='America/New_York')
+ Timestamp('2011-12-08 19:25:00-0500', tz='America/New_York')
+ Timestamp('2013-01-29 09:25:00-0500', tz='America/New_York')
+ Timestamp('2014-03-05 08:10:00-0500', tz='America/New_York')
+ Timestamp('2015-04-16 05:25:00-0400', tz='America/New_York')
+ Timestamp('2016-05-11 04:45:00-0400', tz='America/New_York')
+ Timestamp('2017-06-20 06:55:00-0400', tz='America/New_York')
+ Timestamp('2018-07-30 05:40:00-0400', tz='America/New_York')
+ Timestamp('2019-08-26 08:05:00-0400', tz='America/New_York')
+ Timestamp('2020-09-15 06:15:00-0400', tz='America/New_York')
+ Timestamp('2021-10-04 16:20:00-0400', tz='America/New_York')
+ Timestamp('2022-10-19 08:30:00-0400', tz='America/New_York')
+ Timestamp('2023-11-06 19:15:00-0500', tz='America/New_York')
+ Timestamp('2024-04-30 20:00:00-0400', tz='America/New_York')], [Timestamp('2005-09-30 09:35:00-0400', tz='America/New_York')
+ Timestamp('2007-04-04 07:35:00-0400', tz='America/New_York')
+ Timestamp('2008-07-11 14:15:00-0400', tz='America/New_York')
+ Timestamp('2009-09-03 15:20:00-0400', tz='America/New_York')
+ Timestamp('2010-10-28 19:50:00-0400', tz='America/New_York')
+ Timestamp('2011-12-08 19:25:00-0500', tz='America/New_York')
+ Timestamp('2013-01-29 09:25:00-0500', tz='America/New_York')
+ Timestamp('2014-03-05 08:10:00-0500', tz='America/New_York')
+ Timestamp('2015-04-16 05:25:00-0400', tz='America/New_York')
+ Timestamp('2016-05-11 04:45:00-0400', tz='America/New_York')
+ Timestamp('2017-06-20 06:55:00-0400', tz='America/New_York')
+ Timestamp('2018-07-30 05:40:00-0400', tz='America/New_York')
+ Timestamp('2019-08-26 08:05:00-0400', tz='America/New_York')
+ Timestamp('2020-09-15 06:15:00-0400', tz='America/New_York')
+ Timestamp('2021-10-04 16:20:00-0400', tz='America/New_York')
+ Timestamp('2022-10-19 08:30:00-0400', tz='America/New_York')
+ Timestamp('2023-11-06 19:15:00-0500', tz='America/New_York')
+ Timestamp('2024-04-30 20:00:00-0400', tz='America/New_York')]
+means: [0.00549938 0.         0.53133662 0.41006338 0.08925467 0.0816245
+ 0.47741532 0.24313267 0.         0.00338524 0.51046093 0.2603248
+ 0.05576369 0.00317035 0.47323588 0.4154853  0.49238722 0.50117881], [0.         0.03911816 0.33050115 0.46762003 0.19475128 0.00172973
+ 0.0023407  0.01143154 0.29231356 0.07280275 0.03852715 0.31237744
+ 0.21322998 0.2568636  0.2755712  0.39325674 0.41536095 0.2483792 ], std: [0.00000000e+00 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 5.55111512e-17 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 1.11022302e-16 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 5.55111512e-17 5.55111512e-17
+ 0.00000000e+00 0.00000000e+00], [0.00000000e+00 0.00000000e+00 5.55111512e-17 5.55111512e-17
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 5.55111512e-17
+ 0.00000000e+00 5.55111512e-17 5.55111512e-17 0.00000000e+00
+ 0.00000000e+00 2.77555756e-17], timestamps: [Timestamp('2005-09-30 09:35:00-0400', tz='America/New_York')
+ Timestamp('2007-04-04 07:35:00-0400', tz='America/New_York')
+ Timestamp('2008-07-11 14:15:00-0400', tz='America/New_York')
+ Timestamp('2009-09-03 15:20:00-0400', tz='America/New_York')
+ Timestamp('2010-10-28 19:50:00-0400', tz='America/New_York')
+ Timestamp('2011-12-08 19:25:00-0500', tz='America/New_York')
+ Timestamp('2013-01-29 09:25:00-0500', tz='America/New_York')
+ Timestamp('2014-03-05 08:10:00-0500', tz='America/New_York')
+ Timestamp('2015-04-16 05:25:00-0400', tz='America/New_York')
+ Timestamp('2016-05-11 04:45:00-0400', tz='America/New_York')
+ Timestamp('2017-06-20 06:55:00-0400', tz='America/New_York')
+ Timestamp('2018-07-30 05:40:00-0400', tz='America/New_York')
+ Timestamp('2019-08-26 08:05:00-0400', tz='America/New_York')
+ Timestamp('2020-09-15 06:15:00-0400', tz='America/New_York')
+ Timestamp('2021-10-04 16:20:00-0400', tz='America/New_York')
+ Timestamp('2022-10-19 08:30:00-0400', tz='America/New_York')
+ Timestamp('2023-11-06 19:15:00-0500', tz='America/New_York')
+ Timestamp('2024-04-30 20:00:00-0400', tz='America/New_York')], [Timestamp('2005-09-30 09:35:00-0400', tz='America/New_York')
+ Timestamp('2007-04-04 07:35:00-0400', tz='America/New_York')
+ Timestamp('2008-07-11 14:15:00-0400', tz='America/New_York')
+ Timestamp('2009-09-03 15:20:00-0400', tz='America/New_York')
+ Timestamp('2010-10-28 19:50:00-0400', tz='America/New_York')
+ Timestamp('2011-12-08 19:25:00-0500', tz='America/New_York')
+ Timestamp('2013-01-29 09:25:00-0500', tz='America/New_York')
+ Timestamp('2014-03-05 08:10:00-0500', tz='America/New_York')
+ Timestamp('2015-04-16 05:25:00-0400', tz='America/New_York')
+ Timestamp('2016-05-11 04:45:00-0400', tz='America/New_York')
+ Timestamp('2017-06-20 06:55:00-0400', tz='America/New_York')
+ Timestamp('2018-07-30 05:40:00-0400', tz='America/New_York')
+ Timestamp('2019-08-26 08:05:00-0400', tz='America/New_York')
+ Timestamp('2020-09-15 06:15:00-0400', tz='America/New_York')
+ Timestamp('2021-10-04 16:20:00-0400', tz='America/New_York')
+ Timestamp('2022-10-19 08:30:00-0400', tz='America/New_York')
+ Timestamp('2023-11-06 19:15:00-0500', tz='America/New_York')
+ Timestamp('2024-04-30 20:00:00-0400', tz='America/New_York')]

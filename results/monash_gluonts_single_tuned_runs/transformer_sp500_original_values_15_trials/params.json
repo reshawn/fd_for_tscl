@@ -1,0 +1,1 @@
+{"model_dim_num_heads_pair": [59, 1], "inner_ff_dim_scale": 2, "embedding_dimension": 1, "dropout_rate": 0.08557349214052716, "trainer:learning_rate": 0.0008734666463649563, "trainer:epochs": 100, "model_dim": 59, "num_heads": 1}
