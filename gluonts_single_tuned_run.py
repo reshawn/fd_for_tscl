@@ -330,28 +330,42 @@ def run(X, model, dataset_name, save_label, n_trials, n_repeats, d=None, thresh=
 if __name__ == '__main__':
 
     ######################### m4 series ##########################################
+
     # X = pd.read_csv('m4_1165_fd.csv') # original fd, default thresh, no skips, d=0.1
+    #
     X = pd.read_csv('m4_1165_ffd.csv') # fixed width fd, 0.01 thresh, d=0.95
+    X.rename(columns={"values_o": "target_o", "values_fd": "target_fd"}, inplace=True)
+    dataset = 'm4_daily_dataset'
     d=0.95
     thresh = 0.01
-    X_withoutfd = X.drop(columns=['values_fd']).rename(columns={"values_o":"target"})
-    X_fdtarget = X.rename(columns={"values_fd": "target"}) 
+
+    ######################### traffic series ##########################################
+    
+    X = pd.read_csv('traffic_5771_ffd.csv') # fixed width fd, 0.01 thresh, d=0.5
+    X.rename(columns={"values_o": "target_o", "values_fd": "target_fd"}, inplace=True)
+    dataset = 'traffic_neurips'
+    d=0.5
+    thresh = 0.01
+
+    X_withoutfd = X.drop(columns=['target_fd']).rename(columns={"target_o":"target"})
+    X_fdtarget = X.rename(columns={"target_fd": "target"}) 
     # this X_fdtarget leaves o in fdr, fd_fdr is still the opposite to compare the impact of fd as target, 
     # and so far most tests have shown o+fd being more effective than fd alone
-    X_otarget_fdinfdr = X.rename(columns={"values_o": "target"})
+    X_otarget_fdinfdr = X.rename(columns={"target_o": "target"})
     save_labels = ['original_values', 'fd_target_values', 'fd_in_fdr']
 
-    # run(X_withoutfd, 'transformer', 'm4_daily_dataset', save_label=save_labels[0], n_trials=15, n_repeats=5)
-    # run(X_fdtarget, 'transformer', 'm4_daily_dataset', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
-    # run(X_otarget_fdinfdr, 'transformer', 'm4_daily_dataset', save_label=save_labels[2], n_trials=15, n_repeats=5)
+    run(X_withoutfd, 'transformer', dataset, save_label=save_labels[0], n_trials=15, n_repeats=5)
+    run(X_fdtarget, 'transformer', dataset, save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
+    run(X_otarget_fdinfdr, 'transformer', dataset, save_label=save_labels[2], n_trials=15, n_repeats=5)
     
-    # run(X_withoutfd, 'feedforward', 'm4_daily_dataset', save_label=save_labels[0], n_trials=15, n_repeats=5)
-    # run(X_fdtarget, 'feedforward', 'm4_daily_dataset', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
-    # run(X_otarget_fdinfdr, 'feedforward', 'm4_daily_dataset', save_label=save_labels[2], n_trials=15, n_repeats=5)
+    run(X_withoutfd, 'feedforward', dataset, save_label=save_labels[0], n_trials=15, n_repeats=5)
+    run(X_fdtarget, 'feedforward', dataset, save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
+    run(X_otarget_fdinfdr, 'feedforward', dataset, save_label=save_labels[2], n_trials=15, n_repeats=5)
     
-    # run(X_withoutfd, 'wavenet', 'm4_daily_dataset', save_label=save_labels[0], n_trials=15, n_repeats=5)
-    # run(X_fdtarget, 'wavenet', 'm4_daily_dataset', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
-    # run(X_otarget_fdinfdr, 'wavenet', 'm4_daily_dataset', save_label=save_labels[2], n_trials=15, n_repeats=5)
+    run(X_withoutfd, 'wavenet', dataset, save_label=save_labels[0], n_trials=15, n_repeats=5)
+    run(X_fdtarget, 'wavenet', dataset, save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
+    run(X_otarget_fdinfdr, 'wavenet', dataset, save_label=save_labels[2], n_trials=15, n_repeats=5)
+
 
 
     ########################## S&P 500 series ##########################################
@@ -393,6 +407,6 @@ if __name__ == '__main__':
     # run(X_fdtarget, 'feedforward', 'sp500', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
     # run(X_otarget_fdinfdr, 'feedforward', 'sp500', save_label=save_labels[2], n_trials=15, n_repeats=5)
     
-    run(X_withoutfd, 'wavenet', 'sp500', save_label=save_labels[0], n_trials=15, n_repeats=5)
-    run(X_fdtarget, 'wavenet', 'sp500', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
-    run(X_otarget_fdinfdr, 'wavenet', 'sp500', save_label=save_labels[2], n_trials=15, n_repeats=5)
+    # run(X_withoutfd, 'wavenet', 'sp500', save_label=save_labels[0], n_trials=15, n_repeats=5)
+    # run(X_fdtarget, 'wavenet', 'sp500', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
+    # run(X_otarget_fdinfdr, 'wavenet', 'sp500', save_label=save_labels[2], n_trials=15, n_repeats=5)

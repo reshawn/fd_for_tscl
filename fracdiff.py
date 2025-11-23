@@ -142,7 +142,11 @@ def invert_fd(new_fd_series, original_series, d):
         new_unfd_series.loc[i] = (new_fd_series.loc[i] - np.dot(weights[-(len(new_unfd_series)+1):-1, :].T, new_unfd_series))[0]
     return new_unfd_series
 
-def invert_ffd(new_fd_series, original_series, d, thresh):
+def invert_ffd(new_fd_series, original_series, d, thresh, full_original=False):
+    # *********** 
+    # NOTE: full_original assumes that the original series is the actual original series before the FD was applied.
+    # NOT the re-aligned original series after FD where initial rows are dropped. The width adjustment of the index does the re-alignment in this function
+    # ***********
     # similar as the original invert_fd function,
     # or (the current frac diff value - the 1 less than complete frac diff calculation for this current value) / the current weight
     # and the current weight will always be 1 as the first in that series
@@ -153,7 +157,8 @@ def invert_ffd(new_fd_series, original_series, d, thresh):
     width = len(weights) - 1 # -1 to allow for slicing a window of len(weights)
     new_unfd_series = original_series.copy()
     new_fd_series = new_fd_series.copy()
-    new_fd_series.index += width # shift the index to align with the original series index, i.e. before nans were dropped and the index reset on the frac diffed series
+    if full_original:
+        new_fd_series.index += width # shift the index to align with the original series index, i.e. before nans were dropped and the index reset on the frac diffed series
 
     for i in range(original_series.index[-1]+1, new_fd_series.index[-1]+1): # weirdly taking the last index + 1 instead of len/shape because of the index shift on the new fd series
         # new_unfd_series will have all known values so far up to i-1 as the index of the final inverted series
@@ -191,7 +196,7 @@ def frac_diff_bestd(df, type='fd'):
                 # remember to consider the starting point, and the series in focus
                 # a picked non stat series in m4 that benefitted from the short window more is the reason why those are still a point of interest
                 # despite the windowing being more of an efficiency addition
-                frac_diff_test = frac_diff_ffd(df[[col]], d  ) # , thresh
+                frac_diff_test = frac_diff_ffd(df[[col]], d ) # , thresh
             else:
                 frac_diff_test = frac_diff(df[[col]], d  )
             frac_diff_test.dropna(inplace=True)
