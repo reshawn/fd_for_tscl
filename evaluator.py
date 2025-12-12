@@ -4,8 +4,8 @@ import time
 from tqdm import tqdm
 import warnings
 warnings.filterwarnings('ignore')
-
-
+import pickle
+import os
 
 from sklearn.model_selection import train_test_split
 
@@ -33,13 +33,16 @@ class Evaluator:
         self.data_params = None
         self.model_params = None
         self.skip_tuning = False
+        self.gluonts = False
 
         
-        gluonts_models = ['transformer']
+        gluonts_models = ['transformer', 'ffn', 'wavenet']
         if self.model_name in gluonts_models:
+            self.gluonts = True
             self.split_at_ends = True
             self.data_params = load_params('gluonts_params.txt', self.dataset_name)
-            self.model_params = load_params('gluonts_model_params.txt', self.model_name)
+            # self.model_params = load_params('gluonts_model_params.txt', self.model_name) # can use when needed if preloading params
+            self.model_params = {"ctx": 'gpu(0)'}
             self.prediction_length = self.data_params['prediction_length']
             self.context_length = self.data_params['context_length']
         
@@ -141,5 +144,73 @@ class Evaluator:
             cr_results.append(result)
 
         return ar_results, cr_results
+    
+
+    def run_measurements_gluonts(
+            self,
+            ):
+        """
+        Evaluate a model's adaptation performance on a dataset in an online setup.
+
+        Parameters
+        ----------
+
+        Returns
+        -------
+        list
+            A list of dictionaries containing the evaluation results for each chunk.
+            
+        The adaptation measure simulates an online learning scenario where the dataset
+        is processed in chunks. For each chunk, the model is tuned and trained using
+        seen data, and evaluated on a test set. The process is repeated for all chunks,
+        and the results are returned as a list.
+        """
+
+        ar_results = []
+        cr_results = []
+        predictor = None
+        X_seen, y_seen = pd.DataFrame(), pd.DataFrame()
+        trainer = Trainer(self.model_name, self.dataset_name, num_runs=self.num_runs, d=self.d, thresh=self.thresh)
+
+        if (self.end_chunk == -1) or (self.end_chunk > len(self.chunks)-1): self.end_chunk=len(self.chunks)-1
+        
+        print(f'Running measurements from chunk {self.start_chunk} to {self.end_chunk} of {len(self.chunks)}')
+        for i in tqdm(range(0, self.end_chunk+1), total=self.end_chunk - self.start_chunk + 1):
+            chunk = self.chunks[i]
+            X_chunk, y_chunk = chunk
+            # X_seen, y_seen = pd.DataFrame(), pd.DataFrame()
+            X_seen, y_seen = X_chunk, y_chunk # assuming chunks too big to retain for gluonts models 
+            y_seen = y_seen.squeeze()
+            if i < self.start_chunk:
+                continue
+            
+            print(f'Running measurement pair {i} of {self.num_chunks-1} chunks')
+            print(X_seen)
+            X_train, X_val, y_train, y_val = self.validation_set_split(X_seen, y_seen)
+            print(f'Tuning run {i} of {self.num_chunks-1} chunks')
+ 
+            trainer.tune(X_train, y_train, X_val, y_val)
+
+            # tune doesnt change last predictor, only train so the last predictor is of the last chunk if any
+            predictor = trainer.last_predictor # keep current last predictor set for use in repeat runs
+
+            print(f'AR Training run {i} of {self.num_chunks-1} chunks')
+            X_chunk_test = self.test_sets[i][0]
+            y_chunk_test = self.test_sets[i][1]
+            
+            result = trainer.train_eval(X_seen, y_seen, X_chunk_test, y_chunk_test, predictor=predictor)
+            result['last_ts'] = X_seen.index[-1]
+            ar_results.append(result)
+
+            
+            base_dir = 'results/intermediary_saves/'
+            subfolder = f'{self.dataset_name}_{self.model_name}'
+            # make dir with exit ok true
+            os.makedirs(f'{base_dir}{subfolder}', exist_ok=True)
+            with open(f'{base_dir}{subfolder}/adaptation_results.pkl', 'wb') as f:
+                pickle.dump(ar_results, f)
+
+        return ar_results
+
 
 

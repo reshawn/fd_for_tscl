@@ -27,8 +27,8 @@ if __name__ == "__main__":
     dataset_name = args.dataset
     print(f'Running measurements with params: format={data_forms}, dataset_name={dataset_name}')
 
-    model_name = 'transformer'
-    original_target = False
+    model_name = 'wavenet'
+    original_target = True
 
 
     valid_forms = ['fd' , 'fod', 'o', 'ta_o', 'ta_fod', 'ta_frac_diff', 'auto']
@@ -36,7 +36,7 @@ if __name__ == "__main__":
         if data_form not in valid_forms:
             raise ValueError(f'The data_form arg must be one of: {valid_forms}')
 
-    if data_forms[0] == 'auto': form_sets = [['o', 'fd']] # ['o'], 
+    if data_forms[0] == 'auto': form_sets = ['o'] # [['o', 'fd']] # ['o'] #
     else: form_sets = [data_forms]
 
 
@@ -45,16 +45,33 @@ if __name__ == "__main__":
 
     ####################################### Load Data ##############################################################################################
 
-    with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_bintp_labelled.pkl', 'rb') as f:
-        df_original = pickle.load(f) # ohlv + transactions + labels + bintp labels
+    # with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_bintp_labelled.pkl', 'rb') as f:
+    #     df_original = pickle.load(f) # ohlv + transactions + labels + bintp labels
     with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_bintp004_episodes_fracdiff.pkl', 'rb') as f:
         df_fd = pickle.load(f) # fracdiffed ohlcv + transactions + labels
     with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_labelled_episodes_ta.pkl', 'rb') as f:
         df_ta = pickle.load(f) # ohlcv + ~120 TA features + labels
     with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_ta_fracdiff.pkl', 'rb') as f:
         df_fd_ta = pickle.load(f) # fracdiffed ohlcv + transactions + ~120 TA features + labels
-    df = df_original[["volume", "vwap", "open", "close", "high", "low", "transactions"]] # 0.01 0.001
+    
+    df = df_ta[["volume", "vwap", "open", "close", "high", "low", "transactions"]] # 0.01 0.001
+    df_fd = df_fd[["volume", "vwap", "open", "close", "high", "low", "transactions"]]
     # df
+
+    with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_bintp_labelled.pkl', 'rb') as f:
+        df_original = pickle.load(f) # ohlv + transactions + labels + bintp labels
+    with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_fd.pkl', 'rb') as f:
+        df_fd = pickle.load(f) # d=0.25 when using this one, post h=l drop
+    # with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_bintp004_episodes_fracdiff.pkl', 'rb') as f:
+    #     df_fd = pickle.load(f) # fracdiffed ohlcv + transactions + labels
+
+    # filter single order bars
+    df_original.drop(df_original[df_original['high'] == df_original['low']].index, inplace=True)
+
+    d = 0.25 # 0.2 0.25
+    thresh = 1e-5
+
+    df_size = 20_000
 
 
     ####################################### Prep Data Forms ##############################################################################################
@@ -99,8 +116,8 @@ if __name__ == "__main__":
             
 
         ####################################### Run Framework ##############################################################################################
-        X = X[5000:10000]
-        chunk_size = 1000 #int(X.shape[0] * 0.1)
+        X = X[20000:120_000]
+        chunk_size = 20_000 #int(X.shape[0] * 0.1)
         num_runs = 10
 
         print(f'Running measurements with params: format={data_form},chunk_size={chunk_size}, num_runs={num_runs}, \
@@ -131,9 +148,9 @@ if __name__ == "__main__":
                 cr_sofar = pickle.load(f)
             
         if original_target:
-            a,c,p = run_measurements(X, y, chunk_size, dataset_name, model_name, start_chunk=start_chunk, end_chunk=-1, num_runs=num_runs)
+            a,c,p = run_measurements(X, y, chunk_size, dataset_name, model_name, start_chunk=start_chunk, end_chunk=-1, num_runs=num_runs, gluonts=True)
         else: #fd target
-            a,c,p = run_measurements(X, y, chunk_size, dataset_name, model_name, start_chunk=start_chunk, end_chunk=-1, num_runs=num_runs, d=0.2 , thresh=1e-5 )
+            a,c,p = run_measurements(X, y, chunk_size, dataset_name, model_name, start_chunk=start_chunk, end_chunk=-1, num_runs=num_runs, d=d , thresh=thresh, gluonts=True )
 
         ####################################### Save Results and Visualizations ###############################################################################
 
@@ -141,16 +158,16 @@ if __name__ == "__main__":
             os.mkdir(save_dir)
         with open(f'{save_dir}/adaptation_results.pkl', 'wb') as f:
             pickle.dump(a, f)
-        with open(f'{save_dir}/consolidation_results.pkl', 'wb') as f:
-            pickle.dump(c, f)
+        # with open(f'{save_dir}/consolidation_results.pkl', 'wb') as f:
+        #     pickle.dump(c, f)
 
         end = time.time()
         runtime = (end - start) / 60
         print(f"Runtime: {runtime} minutes")
 
-        viz(a, c, metric='mase', title=data_forms, dir=save_dir) 
-        viz(a, c, metric='rmse', title=data_forms, dir=save_dir) 
-
+        # viz(a, c, metric='mase', title=data_forms, dir=save_dir) 
+        # viz(a, c, metric='rmse', title=data_forms, dir=save_dir) 
+        print(a,c,p)
         print(f'Finished measurements with params: format={data_forms},chunk_size={chunk_size}, num_runs={num_runs}, \
             dataset_name={dataset_name}, model_name={model_name}')
         

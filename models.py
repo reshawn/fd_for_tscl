@@ -7,6 +7,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 
 from gluonts.mx.model.transformer import TransformerEstimator
+from gluonts.mx.model.simple_feedforward import SimpleFeedForwardEstimator
+from gluonts.mx.model.wavenet import WaveNetEstimator
 from gluonts.mx.trainer.callback import TrainingHistory
 
 from gluonts.mx.trainer import Trainer
@@ -37,6 +39,23 @@ def load_model(model_name, params):
               trainer=Trainer(ctx=params['ctx'],epochs=params['trainer:epochs'], learning_rate=params['trainer:learning_rate'],
                               num_batches_per_epoch=100, callbacks=[history]), #
           )
+    elif model_name == 'ffn':
+        model = SimpleFeedForwardEstimator(
+            num_hidden_dimensions= params['num_hidden_dimensions'], #num_hidden_dimensions,
+            prediction_length=params['prediction_length'],
+            context_length=params['context_length'],
+            batch_normalization=True,
+            mean_scaling=True,
+            trainer=Trainer(ctx=params['ctx'],epochs=params['trainer:epochs'], learning_rate=params['trainer:learning_rate'],
+                            num_batches_per_epoch=100, callbacks=[history]),
+        )
+    elif model_name == 'wavenet':
+            model = WaveNetEstimator(
+                freq=params['freq'],
+                prediction_length=params['prediction_length'],
+                trainer=Trainer(ctx=params['ctx'],epochs=params['trainer:epochs'], learning_rate=params['trainer:learning_rate'],
+                                    num_batches_per_epoch=100, callbacks=[history], add_default_callbacks=False),
+        )
     return model, history
 
 def load_model_params(model_name, trial):
@@ -66,6 +85,17 @@ def load_model_params(model_name, trial):
             "trainer:learning_rate": trial.suggest_loguniform("trainer:learning_rate", 1e-6, 1e-3),
             "trainer:epochs": trial.suggest_int("trainer:epochs", 10, 100),
         }
+    if model_name == 'ffn':
+            return {
+              "num_hidden_dimensions": [trial.suggest_int("hidden_dim_{}".format(i), 10, 100) for i in range(trial.suggest_int("num_layers", 1, 5))],
+              "trainer:learning_rate": trial.suggest_loguniform("trainer:learning_rate", 1e-6, 1e-3),
+              "trainer:epochs": trial.suggest_int("trainer:epochs", 10, 100),
+            }
+    if model_name == 'wavenet':
+            return {
+                "trainer:learning_rate": trial.suggest_loguniform("trainer:learning_rate", 1e-6, 1e-3),
+                "trainer:epochs": trial.suggest_int("trainer:epochs", 10, 100),
+            }
 
 
     

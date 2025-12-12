@@ -38,23 +38,24 @@ class Trainer:
         self.thresh = thresh
         self.ctx = 'gpu(0)'
         self.gluonts_metric_type = 'RMSE'
+        self.last_predictor = None
 
-        sklearn_models = ['ridge_classifier', 'random_forest', 'logistic_regression']
-        gluonts_models = ['transformer']
-        pytorch_models = []
+        self.sklearn_models = ['ridge_classifier', 'random_forest', 'logistic_regression']
+        self.gluonts_models = ['transformer', 'ffn', 'wavenet']
+        self.pytorch_models = []
         try:
             self.data_params = load_params('gluonts_params.txt', self.dataset_name)
         except Exception as e:
             print(e)
-            if model_name in gluonts_models:
+            if model_name in self.gluonts_models:
                 print('Gluonts model selected, but no params for the dataset in gluonts_params.txt')
             self.data_params = None
 
-        if model_name in sklearn_models:
+        if model_name in self.sklearn_models:
             self.model_type = 'sklearn'
-        elif model_name in pytorch_models:
+        elif model_name in self.pytorch_models:
             self.model_type = 'pytorch'
-        elif model_name in gluonts_models:
+        elif model_name in self.gluonts_models:
             self.model_type = 'gluonts'
         else:
             raise ValueError(f"Model {model_name} not supported")
@@ -77,7 +78,10 @@ class Trainer:
                     params[key] =  self.data_params[key]
                 params['ctx'] = self.ctx
                 model, _ = load_model(self.model_name, params)
-                predictor = model.train(gluonts_dataset.train, gluonts_dataset.test) # test in this case is the val set
+                if self.last_predictor:
+                    predictor = model.train(gluonts_dataset.train, gluonts_dataset.test, from_predictor=self.last_predictor)
+                else:
+                    predictor = model.train(gluonts_dataset.train, gluonts_dataset.test) # test in this case is the val set
                 forecast_it, ts_it = make_evaluation_predictions(
                     dataset=gluonts_dataset.test,
                     predictor=predictor,
@@ -138,11 +142,13 @@ class Trainer:
             if self.model_name == 'transformer':
                 best_params['model_dim'] = best_params['model_dim_num_heads_pair'][0]
                 best_params['num_heads'] = best_params['model_dim_num_heads_pair'][1]
+            elif self.model_name == 'ffn':
+                best_params["num_hidden_dimensions"] = [ best_params[f"hidden_dim_{i}"] for i in range(best_params["num_layers"]) ]
 
         self.tuned_params = best_params
         return best_params
 
-    def train_eval(self, X_train, y_train, X_test, y_test):
+    def train_eval(self, X_train, y_train, X_test, y_test, predictor=None):
         
         # train the model with the best params 10 times and store the mean and std accuracy, along with training and test times
         accs = []
@@ -156,16 +162,17 @@ class Trainer:
             # -- training ----------------------------------------------------------
             time_a = time.perf_counter()
             model, history = load_model(self.model_name, self.tuned_params)
-            sklearn_models = ['ridge_classifier', 'random_forest', 'logistic_regression']
-            pytorch_models = []
-            gluonts_models = ['transformer']
-            if self.model_name in sklearn_models:
+            if self.model_name in self.sklearn_models:
                 model.fit(X_train, y_train)
-            elif self.model_name in pytorch_models:
+            elif self.model_name in self.pytorch_models:
                 pass
-            elif self.model_name in gluonts_models:
+            elif self.model_name in self.gluonts_models:
                 gluonts_dataset = series_to_gluonts_dataset(X_train, X_test,  self.data_params)
-                model = model.train(gluonts_dataset.train)
+                if predictor:
+                    model = model.train(gluonts_dataset.train, from_predictor=predictor)
+                else:
+                    model = model.train(gluonts_dataset.train)
+                self.last_predictor = model
                 os.makedirs(f'results/gluonts_training_history/{self.dataset_name}', exist_ok=True)
                 with open(f'results/gluonts_training_history/{self.dataset_name}/{self.model_name}_repeatrun_loss_history_{i}.json', "w") as f:
                     json.dump(history.loss_history, f)
@@ -176,7 +183,7 @@ class Trainer:
             # -- test --------------------------------------------------------------
             time_a = time.perf_counter()
 
-            if self.model_name in sklearn_models:
+            if self.model_name in self.sklearn_models:
                 acc = accuracy_score(y_test, model.predict(X_test))
                 mcc = matthews_corrcoef(y_test, model.predict(X_test))
                 f1 = f1_score(y_test, model.predict(X_test)) # , average='weighted' ; consider if setup changes to the more realistic multi-class imbalanced labels
@@ -186,9 +193,9 @@ class Trainer:
                 accs.append(acc)
                 # mccs.append(mcc)
                 f1s.append(f1)
-            elif self.model_name in pytorch_models:
+            elif self.model_name in self.pytorch_models:
                 pass
-            elif self.model_name in gluonts_models:
+            elif self.model_name in self.gluonts_models:
                 forecast_it, ts_it = make_evaluation_predictions(
                     dataset=gluonts_dataset.test,
                     predictor=model,

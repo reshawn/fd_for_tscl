@@ -41,7 +41,7 @@ def train_test_split_by_indices(X,y,test_indices, num_dropped=0):
 
 
 
-def run_measurements(X, y, chunk_size, dataset_name, model_name, start_chunk=0, end_chunk=-1, num_runs=10, frac_diff=False, rocket=False, d=None, thresh=None):
+def run_measurements(X, y, chunk_size, dataset_name, model_name, start_chunk=0, end_chunk=-1, num_runs=10, frac_diff=False, rocket=False, d=None, thresh=None, gluonts=False):
     """
     Evaluate a model's performance on a dataset in terms of adaptation and consolidation measures.
 
@@ -132,7 +132,11 @@ def run_measurements(X, y, chunk_size, dataset_name, model_name, start_chunk=0, 
 
     # in the case of frac diff or any rolling window method, remember to subtract the dropped rows from the cold start size
     print("RUNNING MEASUREMENTS")
-    adaptation_results, consolidation_results = eval.run_measurements()
+    if gluonts:
+        adaptation_results = eval.run_measurements_gluonts()
+        consolidation_results = None
+    else:
+        adaptation_results, consolidation_results = eval.run_measurements()
 
 
     # PRINT VISUALIZATIONS -------------------------------------------------------------------------------------------------

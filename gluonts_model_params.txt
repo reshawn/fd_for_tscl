@@ -9,5 +9,8 @@
             'ctx': 'gpu(0)', 
             'model_dim': 96, 
             'num_heads': 2
+        },
+        "ffn":{
+            'ctx': 'gpu(0)'
         }
 }
