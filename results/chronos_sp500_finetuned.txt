@@ -1,0 +1,5 @@
+[{"dataset": "SP500", "form": "original", "pl": 78, "mase": 0.6786086107990829}, {"dataset": "SP500", "form": "original fd supp", "pl": 78, "mase": 0.7794293386665982}, {"dataset": "SP500", "form": "fd", "pl": 78, "mase": 1.6768243309664583}, {"dataset": "SP500", "form": "original", "pl": 12, "mase": 0.15092587814490285}, {"dataset": "SP500", "form": "original fd supp", "pl": 12, "mase": 0.21483857347163887}, {"dataset": "SP500", "form": "fd", "pl": 12, "mase": 0.4328715131863957}, {"dataset": "SP500", "form": "original", "pl": 780, "mase": 3.76332848600962},{'dataset': 'SP500',
+  'form': 'original fd supp',
+  'pl': 780,
+  'mase': 2.0686549710413695},
+ {'dataset': 'SP500', 'form': 'fd', 'pl': 780, 'mase': 2.0394226320875934}]

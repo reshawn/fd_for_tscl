@@ -1,0 +1,1402 @@
+tuned to RMSE
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on m4_daily_dataset original_values data form, Runtime: 279.03494533315 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'model_dim_num_heads_pair': (32, 4), 'inner_ff_dim_scale': 5, 'embedding_dimension': 7, 'dropout_rate': 0.15672490378798776, 'trainer:learning_rate': 0.0009572942057883465, 'trainer:epochs': 81, 'model_dim': 32, 'num_heads': 4}
+            
+ MASE MEAN: 15.5237980383753 MASE STD: 8.921594649142694
+            
+ sMAPE MEAN: 0.07613754068102155 sMAPE STD: 0.04647137226685637
+            
+ RMSE MEAN: 733.6288366145907 RMSE STD: 398.58766926176
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 314.08343551934996 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'model_dim_num_heads_pair': (20, 2), 'inner_ff_dim_scale': 5, 'embedding_dimension': 4, 'dropout_rate': 0.3508899414014644, 'trainer:learning_rate': 0.0008692914800490626, 'trainer:epochs': 99, 'model_dim': 20, 'num_heads': 2}
+            
+ MASE MEAN: 9.940808181206629 MASE STD: 5.258647384309984
+            
+ sMAPE MEAN: 0.04525359392166138 sMAPE STD: 0.022841102326798052
+            
+ RMSE MEAN: 456.17006471975117 RMSE STD: 215.44403959366133
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on m4_daily_dataset original_values data form, Runtime: 237.00846844094994 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'model_dim_num_heads_pair': (41, 1), 'inner_ff_dim_scale': 1, 'embedding_dimension': 1, 'dropout_rate': 0.07062386081675676, 'trainer:learning_rate': 0.00025425791224883255, 'trainer:epochs': 57, 'model_dim': 41, 'num_heads': 1}
+            
+ MASE MEAN: 3.824536502691859 MASE STD: 1.9794755818480472
+            
+ sMAPE MEAN: 0.017259595649582998 sMAPE STD: 0.008853663423802774
+            
+ RMSE MEAN: 166.0569228163768 RMSE STD: 79.85717512057396
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 195.1231657369334 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'model_dim_num_heads_pair': (60, 1), 'inner_ff_dim_scale': 1, 'embedding_dimension': 1, 'dropout_rate': 0.49740211005822393, 'trainer:learning_rate': 0.00016085457714081904, 'trainer:epochs': 60, 'model_dim': 60, 'num_heads': 1}
+            
+ MASE MEAN: 3.4984726258926693 MASE STD: 0.6512452055498076
+            
+ sMAPE MEAN: 0.01583377889224461 sMAPE STD: 0.002921915445286635
+            
+ RMSE MEAN: 151.7911912339955 RMSE STD: 24.480839362805007
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset original_values data form, Runtime: 38.24189227286649 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 15, 'hidden_dim_1': 53, 'hidden_dim_2': 76, 'hidden_dim_3': 91, 'trainer:learning_rate': 7.769764973575382e-05, 'trainer:epochs': 87, 'num_hidden_dimensions': [15, 53, 76, 91]}
+            
+ MASE MEAN: 2.986901953550176 MASE STD: 0.6849184727625397
+            
+ sMAPE MEAN: 0.013527490624359675 sMAPE STD: 0.003073335464597166
+            
+ RMSE MEAN: 149.4580028084412 RMSE STD: 26.01352316744908
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 32.807797398616664 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'num_layers': 3, 'hidden_dim_0': 40, 'hidden_dim_1': 69, 'hidden_dim_2': 86, 'trainer:learning_rate': 9.249780925068538e-05, 'trainer:epochs': 52, 'num_hidden_dimensions': [40, 69, 86]}
+            
+ MASE MEAN: 3.5567521985963664 MASE STD: 0.470608085361333
+            
+ sMAPE MEAN: 0.016101989575794763 sMAPE STD: 0.0021119343193205867
+            
+ RMSE MEAN: 161.39365771580216 RMSE STD: 19.580761535976542
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on m4_daily_dataset original_values data form, Runtime: 173.21477019338332 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'trainer:learning_rate': 0.00026242605808986604, 'trainer:epochs': 27}
+            
+ MASE MEAN: 4.147445676102523 MASE STD: 0.39877653207286295
+            
+ sMAPE MEAN: 0.018740600134645187 sMAPE STD: 0.0017780390163989904
+            
+ RMSE MEAN: 200.57042320652832 RMSE STD: 31.144836979319802
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 210.06176888188335 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'trainer:learning_rate': 7.161241493878099e-05, 'trainer:epochs': 73}
+            
+ MASE MEAN: 3.8688861225955917 MASE STD: 0.12380424600308042
+            
+ sMAPE MEAN: 0.01749858068568366 sMAPE STD: 0.0005520194768930275
+            
+ RMSE MEAN: 191.88562954775102 RMSE STD: 53.881825834005596
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset original_values data form, Runtime: 40.47624025555 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'num_layers': 5, 'hidden_dim_0': 81, 'hidden_dim_1': 52, 'hidden_dim_2': 28, 'hidden_dim_3': 65, 'hidden_dim_4': 24, 'trainer:learning_rate': 0.00019527302485327968, 'trainer:epochs': 72, 'num_hidden_dimensions': [81, 52, 28, 65, 24]}
+            
+ MASE MEAN: 5.892657010157725 MASE STD: 0.20168596594323265
+            
+ sMAPE MEAN: 0.02757505450929914 sMAPE STD: 0.0009722765783615701
+            
+ RMSE MEAN: 312.11508495021917 RMSE STD: 36.20533943578389
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 33.22656388874999 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'num_layers': 3, 'hidden_dim_0': 31, 'hidden_dim_1': 66, 'hidden_dim_2': 70, 'trainer:learning_rate': 0.0001928669929749156, 'trainer:epochs': 48, 'num_hidden_dimensions': [31, 66, 70]}
+            
+ MASE MEAN: 5.961200060813924 MASE STD: 0.5804718744276424
+            
+ sMAPE MEAN: 0.02790123224258423 sMAPE STD: 0.0027357683694174332
+            
+ RMSE MEAN: 329.57950557770204 RMSE STD: 61.488752191068386
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on m4_daily_dataset original_values data form, Runtime: 217.62017060338337 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'trainer:learning_rate': 7.894390161229077e-05, 'trainer:epochs': 31}
+            
+ MASE MEAN: 6.196056482608101 MASE STD: 0.907191142272722
+            
+ sMAPE MEAN: 0.028906757150377542 sMAPE STD: 0.004215137827334348
+            
+ RMSE MEAN: 329.58677460168354 RMSE STD: 56.64432395421847
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 237.10256082565004 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'trainer:learning_rate': 0.000577329950408617, 'trainer:epochs': 39}
+            
+ MASE MEAN: 6.725765327941565 MASE STD: 3.774315755491053
+            
+ sMAPE MEAN: 0.03181268078940255 sMAPE STD: 0.018240547312863224
+            
+ RMSE MEAN: 325.76798699936705 RMSE STD: 102.09131803345858
+            
+
+
+CHANGING FD TO FFD FOR THE FOLLOWING ------------------------------------------------------------------------------------------
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 307.6206787339499 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'model_dim_num_heads_pair': (54, 1), 'inner_ff_dim_scale': 1, 'embedding_dimension': 8, 'dropout_rate': 0.32817731787652954, 'trainer:learning_rate': 8.747947746492963e-05, 'trainer:epochs': 64, 'model_dim': 54, 'num_heads': 1}
+            
+ MASE MEAN: 4.523459987239321 MASE STD: 1.106225100119285
+            
+ sMAPE MEAN: 0.02118733372287654 sMAPE STD: 0.0051898964119894775
+            
+ RMSE MEAN: 204.9096918346232 RMSE STD: 42.833154007843675
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 216.88431031859994 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'model_dim_num_heads_pair': (54, 9), 'inner_ff_dim_scale': 5, 'embedding_dimension': 4, 'dropout_rate': 0.24441891094368434, 'trainer:learning_rate': 0.00021160437175345075, 'trainer:epochs': 35, 'model_dim': 54, 'num_heads': 9}
+            
+ MASE MEAN: 9.53043935212558 MASE STD: 4.26471823358249
+            
+ sMAPE MEAN: 0.04366960116795131 sMAPE STD: 0.018908578250794988
+            
+ RMSE MEAN: 431.5466952027622 RMSE STD: 169.60064395810187
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 43.484638064949834 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'num_layers': 5, 'hidden_dim_0': 10, 'hidden_dim_1': 84, 'hidden_dim_2': 92, 'hidden_dim_3': 87, 'hidden_dim_4': 67, 'trainer:learning_rate': 0.00030874878141081704, 'trainer:epochs': 55, 'num_hidden_dimensions': [10, 84, 92, 87, 67]}
+            
+ MASE MEAN: 6.709051285492738 MASE STD: 1.09762776995463
+            
+ sMAPE MEAN: 0.03148449671509246 sMAPE STD: 0.005232472067879206
+            
+ RMSE MEAN: 316.1229600322823 RMSE STD: 52.74068565157283
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 46.05821024541656 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'num_layers': 3, 'hidden_dim_0': 38, 'hidden_dim_1': 36, 'hidden_dim_2': 64, 'trainer:learning_rate': 0.0005973950987303905, 'trainer:epochs': 100, 'num_hidden_dimensions': [38, 36, 64]}
+            
+ MASE MEAN: 5.25842870492549 MASE STD: 0.21025300833248595
+            
+ sMAPE MEAN: 0.024585211958203994 sMAPE STD: 0.0009861029467845177
+            
+ RMSE MEAN: 272.9231993312291 RMSE STD: 16.303421497356542
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 203.9110587146332 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'trainer:learning_rate': 0.0001240321377940267, 'trainer:epochs': 35}
+            
+ MASE MEAN: 9.626746416696962 MASE STD: 2.08955564463703
+            
+ sMAPE MEAN: 0.045638055072708364 sMAPE STD: 0.010233647568522497
+            
+ RMSE MEAN: 418.8335404903125 RMSE STD: 87.29449445726824
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 222.73044068716652 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'trainer:learning_rate': 0.00036561266436802064, 'trainer:epochs': 25}
+            
+ MASE MEAN: 5.35102682623856 MASE STD: 0.9329959194563993
+            
+ sMAPE MEAN: 0.025041824749537877 sMAPE STD: 0.004371266873311037
+            
+ RMSE MEAN: 272.8783824107846 RMSE STD: 41.26743595156461
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 256.0536099156665 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'model_dim_num_heads_pair': (50, 1), 'inner_ff_dim_scale': 5, 'embedding_dimension': 5, 'dropout_rate': 0.08294268822172232, 'trainer:learning_rate': 0.0002721300281537509, 'trainer:epochs': 84, 'model_dim': 50, 'num_heads': 1}
+            
+ MASE MEAN: 3.650446932613069 MASE STD: 0.6722386577291495
+            
+ sMAPE MEAN: 0.016477135215466385 sMAPE STD: 0.002991259722669401
+            
+ RMSE MEAN: 177.91414307971826 RMSE STD: 40.374377944039594
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 164.59039012454983 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'model_dim_num_heads_pair': (30, 6), 'inner_ff_dim_scale': 1, 'embedding_dimension': 9, 'dropout_rate': 0.11570347569117478, 'trainer:learning_rate': 5.1198267984086846e-05, 'trainer:epochs': 42, 'model_dim': 30, 'num_heads': 6}
+            
+ MASE MEAN: 6.366618400526625 MASE STD: 1.1121246369183195
+            
+ sMAPE MEAN: 0.02855985292366573 sMAPE STD: 0.004921989687022357
+            
+ RMSE MEAN: 259.86699194091034 RMSE STD: 39.480443616482546
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 24.965076017733374 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 39, 'hidden_dim_1': 68, 'hidden_dim_2': 57, 'hidden_dim_3': 100, 'trainer:learning_rate': 0.0005902340321211576, 'trainer:epochs': 95, 'num_hidden_dimensions': [39, 68, 57, 100]}
+            
+ MASE MEAN: 1.8892342316471649 MASE STD: 0.31546430532113556
+            
+ sMAPE MEAN: 0.008580180789743149 sMAPE STD: 0.0014232041646932698
+            
+ RMSE MEAN: 90.49546035188737 RMSE STD: 16.82549960476605
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 105.67264232308322 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'trainer:learning_rate': 0.0008637418581964633, 'trainer:epochs': 15}
+            
+ MASE MEAN: 2.1145638062318772 MASE STD: 0.22404963423285923
+            
+ sMAPE MEAN: 0.009609492672201845 sMAPE STD: 0.0010118733073405813
+            
+ RMSE MEAN: 98.52149363324102 RMSE STD: 22.869983587756764
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 41.31474013898308 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 37, 'hidden_dim_1': 29, 'hidden_dim_2': 84, 'hidden_dim_3': 95, 'trainer:learning_rate': 0.000950201822907568, 'trainer:epochs': 93, 'num_hidden_dimensions': [37, 29, 84, 95]}
+            
+ MASE MEAN: 5.5525182964365385 MASE STD: 0.6674047640646396
+            
+ sMAPE MEAN: 0.025649659557205197 sMAPE STD: 0.003130465484998611
+            
+ RMSE MEAN: 255.23760056339088 RMSE STD: 25.243942551562675
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 202.17996312284959 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'trainer:learning_rate': 0.0006057608734627701, 'trainer:epochs': 62}
+            
+ MASE MEAN: 4.098682883390982 MASE STD: 0.709938377469271
+            
+ sMAPE MEAN: 0.018490632729870934 sMAPE STD: 0.003165197525256017
+            
+ RMSE MEAN: 164.85902784084698 RMSE STD: 24.180285507578
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on m4_daily_dataset original_values data form, Runtime: 237.49459555049992 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'model_dim_num_heads_pair': (54, 1), 'inner_ff_dim_scale': 1, 'embedding_dimension': 1, 'dropout_rate': 0.18203111291066532, 'trainer:learning_rate': 0.0003468987195475588, 'trainer:epochs': 64, 'model_dim': 54, 'num_heads': 1}
+            
+ MASE MEAN: 1.2521143937932826 MASE STD: 0.4440519965692407
+            
+ sMAPE MEAN: 0.005706832557916641 sMAPE STD: 0.0020353098510573603
+            
+ RMSE MEAN: 58.084627633350124 RMSE STD: 18.327165333686327
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 200.9130208114001 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'model_dim_num_heads_pair': (57, 1), 'inner_ff_dim_scale': 5, 'embedding_dimension': 5, 'dropout_rate': 0.09162874625013735, 'trainer:learning_rate': 0.0007489440095930057, 'trainer:epochs': 43, 'model_dim': 57, 'num_heads': 1}
+            
+ MASE MEAN: 3.8759865654725543 MASE STD: 1.5821281404750125
+            
+ sMAPE MEAN: 0.017452735582407584 sMAPE STD: 0.007004101667117307
+            
+ RMSE MEAN: 181.4572732418282 RMSE STD: 70.57605688980739
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 189.57275603643345 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'model_dim_num_heads_pair': (36, 2), 'inner_ff_dim_scale': 2, 'embedding_dimension': 10, 'dropout_rate': 0.10031001631328323, 'trainer:learning_rate': 0.0004768813248601624, 'trainer:epochs': 38, 'model_dim': 36, 'num_heads': 2}
+            
+ MASE MEAN: 3.4008787662591247 MASE STD: 1.7649963918457672
+            
+ sMAPE MEAN: 0.015342628423656735 sMAPE STD: 0.00789434375474096
+            
+ RMSE MEAN: 153.32683043275728 RMSE STD: 69.24721121755569
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset original_values data form, Runtime: 26.8384508862165 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'num_layers': 3, 'hidden_dim_0': 36, 'hidden_dim_1': 28, 'hidden_dim_2': 99, 'trainer:learning_rate': 0.0008516440146852365, 'trainer:epochs': 37, 'num_hidden_dimensions': [36, 28, 99]}
+            
+ MASE MEAN: 4.52986618947782 MASE STD: 2.339293780766762
+            
+ sMAPE MEAN: 0.02036056135381971 sMAPE STD: 0.010423072888055359
+            
+ RMSE MEAN: 213.85197915425164 RMSE STD: 79.19169558863088
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 28.4415374674 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'num_layers': 2, 'hidden_dim_0': 100, 'hidden_dim_1': 43, 'trainer:learning_rate': 0.00025515131408060263, 'trainer:epochs': 41, 'num_hidden_dimensions': [100, 43]}
+            
+ MASE MEAN: 2.683496966981614 MASE STD: 0.5838852729076061
+            
+ sMAPE MEAN: 0.012157012818067504 sMAPE STD: 0.0026185451396805366
+            
+ RMSE MEAN: 167.08875518492874 RMSE STD: 54.45735935799574
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 24.081138214549963 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 14, 'hidden_dim_1': 79, 'hidden_dim_2': 12, 'hidden_dim_3': 14, 'trainer:learning_rate': 0.0004806293637324433, 'trainer:epochs': 34, 'num_hidden_dimensions': [14, 79, 12, 14]}
+            
+ MASE MEAN: 8.237907829701928 MASE STD: 6.410150721641647
+            
+ sMAPE MEAN: 0.0363987314913954 sMAPE STD: 0.027856838232556858
+            
+ RMSE MEAN: 371.8026114417107 RMSE STD: 255.0889700360501
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on m4_daily_dataset original_values data form, Runtime: 178.40076816798333 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'trainer:learning_rate': 0.0004399962169168738, 'trainer:epochs': 32}
+            
+ MASE MEAN: 4.129637667654942 MASE STD: 0.7166550680013253
+            
+ sMAPE MEAN: 0.018625933357647485 sMAPE STD: 0.0031989676202512606
+            
+ RMSE MEAN: 194.78495081014242 RMSE STD: 57.89197676366476
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 144.59666394956668 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'trainer:learning_rate': 0.0006190768498403927, 'trainer:epochs': 12}
+            
+ MASE MEAN: 2.0554903718257016 MASE STD: 0.1755396331043271
+            
+ sMAPE MEAN: 0.009342162118174327 sMAPE STD: 0.000791792904991282
+            
+ RMSE MEAN: 101.07428667594469 RMSE STD: 29.01435312444883
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 240.59595853111668 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'trainer:learning_rate': 5.182703328063321e-05, 'trainer:epochs': 89}
+            
+ MASE MEAN: 4.253456804710784 MASE STD: 0.7620160059407987
+            
+ sMAPE MEAN: 0.019180713381086078 sMAPE STD: 0.003397373285942687
+            
+ RMSE MEAN: 189.50303391654222 RMSE STD: 13.402896568497722
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on sp500 original_values data form, Runtime: 945.3792288825331 minutes 
+            
+ Prediction length: 12, Context length: 390
+            
+ Params: {'model_dim_num_heads_pair': (22, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 4, 'dropout_rate': 0.48572981244232927, 'trainer:learning_rate': 0.0001400340507775063, 'trainer:epochs': 91, 'model_dim': 22, 'num_heads': 2}
+            
+ MASE MEAN: 0.4154429007032577 MASE STD: 0.18611748104446202
+            
+ sMAPE MEAN: 0.003713353381802638 sMAPE STD: 0.001666387300979285
+            
+ RMSE MEAN: 0.43299768722753756 RMSE STD: 0.19211670495072466
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 1310.133136104883 minutes 
+            
+ Prediction length: 12, Context length: 390
+            
+ Params: {'model_dim_num_heads_pair': (96, 1), 'inner_ff_dim_scale': 2, 'embedding_dimension': 2, 'dropout_rate': 0.32485903145505024, 'trainer:learning_rate': 6.534259566911173e-05, 'trainer:epochs': 95, 'model_dim': 96, 'num_heads': 1}
+            
+ MASE MEAN: 0.1616280522253884 MASE STD: 0.042723964954336655
+            
+ sMAPE MEAN: 0.0014535002892534584 sMAPE STD: 0.0003845626876021535
+            
+ RMSE MEAN: 0.1855119121358432 RMSE STD: 0.04671612634547201
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on sp500 fd_in_fdr data form, Runtime: 628.1691873722506 minutes 
+            
+ Prediction length: 12, Context length: 390
+            
+ Params: {'model_dim_num_heads_pair': (74, 2), 'inner_ff_dim_scale': 2, 'embedding_dimension': 1, 'dropout_rate': 0.2964399666677703, 'trainer:learning_rate': 0.0004774517345910947, 'trainer:epochs': 99, 'model_dim': 74, 'num_heads': 2}
+            
+ MASE MEAN: 0.6976010193556095 MASE STD: 0.21366493882480997
+            
+ sMAPE MEAN: 0.006292721256613731 sMAPE STD: 0.0019303898287712175
+            
+ RMSE MEAN: 0.7106834391957083 RMSE STD: 0.21520444667570884
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 3416.763494761099 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'model_dim_num_heads_pair': (28, 4), 'inner_ff_dim_scale': 1, 'embedding_dimension': 4, 'dropout_rate': 0.2484255006468265, 'trainer:learning_rate': 9.428154914392668e-05, 'trainer:epochs': 94, 'model_dim': 28, 'num_heads': 4}
+            
+ MASE MEAN: 0.36910652762432405 MASE STD: 0.17132800798021058
+            
+ sMAPE MEAN: 0.0033336266389607655 sMAPE STD: 0.001543500089749585
+            
+ RMSE MEAN: 0.4259034549904265 RMSE STD: 0.1729265551626218
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on sp500 fd_in_fdr data form, Runtime: 867.3097418245161 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'model_dim_num_heads_pair': (26, 2), 'inner_ff_dim_scale': 5, 'embedding_dimension': 6, 'dropout_rate': 0.01324609355508586, 'trainer:learning_rate': 0.0009793329255149827, 'trainer:epochs': 100, 'model_dim': 26, 'num_heads': 2}
+            
+ MASE MEAN: 0.9921893233568262 MASE STD: 0.3227560601754212
+            
+ sMAPE MEAN: 0.009005896403239323 sMAPE STD: 0.0029409586929547873
+            
+ RMSE MEAN: 1.0878112469173635 RMSE STD: 0.3284023206964774
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on sp500 original_values data form, Runtime: 1022.3611914780321 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'model_dim_num_heads_pair': (59, 1), 'inner_ff_dim_scale': 2, 'embedding_dimension': 1, 'dropout_rate': 0.08557349214052716, 'trainer:learning_rate': 0.0008734666463649563, 'trainer:epochs': 100, 'model_dim': 59, 'num_heads': 1}
+            
+ MASE MEAN: 0.8949871606305105 MASE STD: 0.19935708559175752
+            
+ sMAPE MEAN: 0.008046085100907544 sMAPE STD: 0.001805338758580671
+            
+ RMSE MEAN: 0.9771609313315169 RMSE STD: 0.22217723049479787
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on sp500 original_values data form, Runtime: 26.338744547449945 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'num_layers': 5, 'hidden_dim_0': 59, 'hidden_dim_1': 73, 'hidden_dim_2': 64, 'hidden_dim_3': 71, 'hidden_dim_4': 47, 'trainer:learning_rate': 1.3209903583015048e-05, 'trainer:epochs': 88, 'num_hidden_dimensions': [59, 73, 64, 71, 47]}
+            
+ MASE MEAN: 0.5160775199231186 MASE STD: 0.18270187644007388
+            
+ sMAPE MEAN: 0.004632238929088299 sMAPE STD: 0.001644258317177564
+            
+ RMSE MEAN: 0.592892220520169 RMSE STD: 0.1976682753296978
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 1419.6814173233665 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'num_layers': 5, 'hidden_dim_0': 70, 'hidden_dim_1': 12, 'hidden_dim_2': 83, 'hidden_dim_3': 67, 'hidden_dim_4': 46, 'trainer:learning_rate': 0.0006914586121614837, 'trainer:epochs': 65, 'num_hidden_dimensions': [70, 12, 83, 67, 46]}
+            
+ MASE MEAN: 0.4287510392105432 MASE STD: 0.06492729113809308
+            
+ sMAPE MEAN: 0.0038777327843900616 sMAPE STD: 0.0005885219579309595
+            
+ RMSE MEAN: 0.5014152856913396 RMSE STD: 0.08151582613060689
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on sp500 fd_in_fdr data form, Runtime: 29.247744428833055 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'num_layers': 5, 'hidden_dim_0': 47, 'hidden_dim_1': 57, 'hidden_dim_2': 11, 'hidden_dim_3': 67, 'hidden_dim_4': 96, 'trainer:learning_rate': 0.0008712413193341102, 'trainer:epochs': 96, 'num_hidden_dimensions': [47, 57, 11, 67, 96]}
+            
+ MASE MEAN: 0.4665799895265253 MASE STD: 0.16468321144468542
+            
+ sMAPE MEAN: 0.004222711958946326 sMAPE STD: 0.0014961485533380521
+            
+ RMSE MEAN: 0.5345654044367782 RMSE STD: 0.15569766102403496
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on sp500 original_values data form, Runtime: 526.9467896534674 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'trainer:learning_rate': 0.0007086368929789557, 'trainer:epochs': 88}
+            
+ MASE MEAN: 0.8278210521000549 MASE STD: 0.18736092478930833
+            
+ sMAPE MEAN: 0.007390756943286994 sMAPE STD: 0.001669507873226934
+            
+ RMSE MEAN: 0.8365609441094832 RMSE STD: 0.1933272731192452
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 1690.6823661072344 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'trainer:learning_rate': 0.0007073420423620394, 'trainer:epochs': 50}
+            
+ MASE MEAN: 0.3030061999305206 MASE STD: 0.05038818137335302
+            
+ sMAPE MEAN: 0.002738780142541255 sMAPE STD: 0.00045546926357452414
+            
+ RMSE MEAN: 0.3526404115946306 RMSE STD: 0.026961777513352686
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on sp500 fd_in_fdr data form, Runtime: 411.6990263069165 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'trainer:learning_rate': 0.0007648138566722109, 'trainer:epochs': 91}
+            
+ MASE MEAN: 0.9523204761321165 MASE STD: 0.07178874897344946
+            
+ sMAPE MEAN: 0.008570309785696176 sMAPE STD: 0.0006460355406112181
+            
+ RMSE MEAN: 0.921601747250999 RMSE STD: 0.11159441472840965
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset original_values data form, Runtime: 24.129364054299852 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'num_layers': 2, 'hidden_dim_0': 51, 'hidden_dim_1': 42, 'trainer:learning_rate': 0.00010365226036247395, 'trainer:epochs': 69, 'num_hidden_dimensions': [51, 42]}
+            
+ MASE MEAN: 3.525423389969265 MASE STD: 1.657271311440969
+            
+ sMAPE MEAN: 0.015905983000993728 sMAPE STD: 0.007421242576041243
+            
+ RMSE MEAN: 160.8660580141346 RMSE STD: 62.1067035753233
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 32.196865720583205 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 59, 'hidden_dim_1': 18, 'hidden_dim_2': 53, 'hidden_dim_3': 86, 'trainer:learning_rate': 8.510214903703593e-05, 'trainer:epochs': 90, 'num_hidden_dimensions': [59, 18, 53, 86]}
+            
+ MASE MEAN: 2.362434091470539 MASE STD: 0.6131756617442631
+            
+ sMAPE MEAN: 0.01071398187662884 sMAPE STD: 0.0027495500760499896
+            
+ RMSE MEAN: 112.82969715702632 RMSE STD: 34.749341850116174
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 24.13800594705002 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 21, 'hidden_dim_1': 10, 'hidden_dim_2': 58, 'hidden_dim_3': 100, 'trainer:learning_rate': 5.986419738207154e-05, 'trainer:epochs': 72, 'num_hidden_dimensions': [21, 10, 58, 100]}
+            
+ MASE MEAN: 2.460097077158351 MASE STD: 0.5825633496529593
+            
+ sMAPE MEAN: 0.011168067370142256 sMAPE STD: 0.002613940556756438
+            
+ RMSE MEAN: 114.39038489701802 RMSE STD: 24.73634632922201
+            
+
+
+       
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on sp500 original_values data form, Runtime: 35.40598254778403 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 28, 'hidden_dim_1': 23, 'hidden_dim_2': 56, 'hidden_dim_3': 66, 'trainer:learning_rate': 0.0006557918143311623, 'trainer:epochs': 93, 'num_hidden_dimensions': [28, 23, 56, 66]}
+            
+ MASE MEAN: 0.40603775946609383 MASE STD: 0.12746948802210015
+            
+ sMAPE MEAN: 0.003635413142351004 sMAPE STD: 0.001137268706090717
+            
+ RMSE MEAN: 0.48405082810368183 RMSE STD: 0.12626002731914773
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 1905.4013729433666 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'num_layers': 1, 'hidden_dim_0': 81, 'trainer:learning_rate': 1.3732358591921697e-05, 'trainer:epochs': 97, 'num_hidden_dimensions': [81]}
+            
+ MASE MEAN: 0.38150937608712265 MASE STD: 0.07353219507091206
+            
+ sMAPE MEAN: 0.0034495777030405504 sMAPE STD: 0.0006661966598754542
+            
+ RMSE MEAN: 0.43633620984960847 RMSE STD: 0.08089194714009453
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on sp500 fd_in_fdr data form, Runtime: 26.408381150049777 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'num_layers': 1, 'hidden_dim_0': 70, 'trainer:learning_rate': 8.07630886624142e-06, 'trainer:epochs': 80, 'num_hidden_dimensions': [70]}
+            
+ MASE MEAN: 0.3928896880204239 MASE STD: 0.11395881298472567
+            
+ sMAPE MEAN: 0.0035541748389219625 sMAPE STD: 0.0010335128138662184
+            
+ RMSE MEAN: 0.4797690279173713 RMSE STD: 0.1378625862414908
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset original_values data form, Runtime: 24.744479754582667 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 74, 'hidden_dim_1': 39, 'hidden_dim_2': 44, 'hidden_dim_3': 94, 'trainer:learning_rate': 0.00013258896684341612, 'trainer:epochs': 85, 'num_hidden_dimensions': [74, 39, 44, 94]}
+            
+ MASE MEAN: 2.6564628186024435 MASE STD: 1.1328220296393148
+            
+ sMAPE MEAN: 0.012018322678548948 sMAPE STD: 0.005095538473798912
+            
+ RMSE MEAN: 130.06570458427444 RMSE STD: 51.56497252656972
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 26.779047016000064 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'num_layers': 2, 'hidden_dim_0': 62, 'hidden_dim_1': 28, 'trainer:learning_rate': 5.2307879439865135e-05, 'trainer:epochs': 100, 'num_hidden_dimensions': [62, 28]}
+            
+ MASE MEAN: 3.8642657678931727 MASE STD: 0.6944295838203156
+            
+ sMAPE MEAN: 0.017756791802443977 sMAPE STD: 0.0032180912884208967
+            
+ RMSE MEAN: 175.30502571480696 RMSE STD: 17.92883402133927
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 28.561795117349053 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 53, 'hidden_dim_1': 55, 'hidden_dim_2': 49, 'hidden_dim_3': 100, 'trainer:learning_rate': 0.00017285934749109062, 'trainer:epochs': 99, 'num_hidden_dimensions': [53, 55, 49, 100]}
+            
+ MASE MEAN: 2.468185291534355 MASE STD: 0.4169450236846346
+            
+ sMAPE MEAN: 0.01118612438440323 sMAPE STD: 0.0018739640696378299
+            
+ RMSE MEAN: 117.96071987530888 RMSE STD: 12.932069925976164
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on sp500 original_values data form, Runtime: 31.1571107055177 minutes 
+            
+ Prediction length: 12, Context length: 390
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 99, 'hidden_dim_1': 59, 'hidden_dim_2': 64, 'hidden_dim_3': 45, 'trainer:learning_rate': 0.0003190351803093434, 'trainer:epochs': 99, 'num_hidden_dimensions': [99, 59, 64, 45]}
+            
+ MASE MEAN: 0.7664143345197824 MASE STD: 0.6116189088463638
+            
+ sMAPE MEAN: 0.0068743070277074965 sMAPE STD: 0.005501522103283693
+            
+ RMSE MEAN: 0.7825572639850086 RMSE STD: 0.6106296902643926
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 500.37604434199943 minutes 
+            
+ Prediction length: 12, Context length: 390
+            
+ Params: {'num_layers': 1, 'hidden_dim_0': 100, 'trainer:learning_rate': 0.0008380864779627794, 'trainer:epochs': 60, 'num_hidden_dimensions': [100]}
+            
+ MASE MEAN: 0.23070219353307325 MASE STD: 0.15855155808811455
+            
+ sMAPE MEAN: 0.0020766809656180647 sMAPE STD: 0.0014293640398898263
+            
+ RMSE MEAN: 0.26204618184643924 RMSE STD: 0.15843035630265687
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on sp500 fd_in_fdr data form, Runtime: 35.61538753299974 minutes 
+            
+ Prediction length: 12, Context length: 390
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 21, 'hidden_dim_1': 68, 'hidden_dim_2': 36, 'hidden_dim_3': 89, 'trainer:learning_rate': 0.0009798739282464333, 'trainer:epochs': 46, 'num_hidden_dimensions': [21, 68, 36, 89]}
+            
+ MASE MEAN: 0.23686707785110914 MASE STD: 0.11237614563234034
+            
+ sMAPE MEAN: 0.0021277642265583076 sMAPE STD: 0.001008602472422442
+            
+ RMSE MEAN: 0.27002513871072104 RMSE STD: 0.12039343517195718
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset original_values data form, Runtime: 24.5871872223157 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'num_layers': 1, 'hidden_dim_0': 89, 'trainer:learning_rate': 9.099452839718082e-05, 'trainer:epochs': 81, 'num_hidden_dimensions': [89]}
+            
+ MASE MEAN: 4.996289218644344 MASE STD: 0.6281380886997021
+            
+ sMAPE MEAN: 0.023372532299586708 sMAPE STD: 0.0029309098275305304
+            
+ RMSE MEAN: 238.11368163197403 RMSE STD: 27.50049957382184
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset original_values data form, Runtime: 24.75599955188227 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'num_layers': 2, 'hidden_dim_0': 32, 'hidden_dim_1': 59, 'trainer:learning_rate': 0.00033491386437168284, 'trainer:epochs': 90, 'num_hidden_dimensions': [32, 59]}
+            
+ MASE MEAN: 5.766279810821397 MASE STD: 0.4661344290923143
+            
+ sMAPE MEAN: 0.026986583982195174 sMAPE STD: 0.002197168897204149
+            
+ RMSE MEAN: 270.52283567901685 RMSE STD: 27.46573874402573
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 30.261198952382742 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 30, 'hidden_dim_1': 19, 'hidden_dim_2': 84, 'hidden_dim_3': 31, 'trainer:learning_rate': 0.00013880290471905392, 'trainer:epochs': 94, 'num_hidden_dimensions': [30, 19, 84, 31]}
+            
+ MASE MEAN: 5.855269140140676 MASE STD: 0.21948666392478142
+            
+ sMAPE MEAN: 0.027389922827193214 sMAPE STD: 0.0010400367257498559
+            
+ RMSE MEAN: 271.69546638266223 RMSE STD: 16.4617607415481
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_in_fdr data form, Runtime: 25.230720023432514 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'num_layers': 2, 'hidden_dim_0': 50, 'hidden_dim_1': 40, 'trainer:learning_rate': 0.0001396142453198643, 'trainer:epochs': 94, 'num_hidden_dimensions': [50, 40]}
+            
+ MASE MEAN: 5.9131438163401535 MASE STD: 0.3225457681442222
+            
+ sMAPE MEAN: 0.027671141624450685 sMAPE STD: 0.0015211633430301035
+            
+ RMSE MEAN: 288.05119704268793 RMSE STD: 19.550576081837736
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on sp500 original_values data form, Runtime: 546.6565463969678 minutes 
+            
+ Prediction length: 12, Context length: 390
+            
+ Params: {'trainer:learning_rate': 0.00016442876799217747, 'trainer:epochs': 100}
+            
+ MASE MEAN: 1.6248503324493093 MASE STD: 0.0
+            
+ sMAPE MEAN: 0.014387538035710653 sMAPE STD: 0.0
+            
+ RMSE MEAN: 1.4845462775810367 RMSE STD: 0.07444491424256501
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on sp500 fd_in_fdr data form, Runtime: 748.7434781627342 minutes 
+            
+ Prediction length: 12, Context length: 390
+            
+ Params: {'trainer:learning_rate': 0.0007180623994581011, 'trainer:epochs': 98}
+            
+ MASE MEAN: 1.4111201671020013 MASE STD: 0.40172568491381516
+            
+ sMAPE MEAN: 0.012598951533436775 sMAPE STD: 0.003577173004547755
+            
+ RMSE MEAN: 1.3416285032345 RMSE STD: 0.3000696821986233
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 75.54706332101667 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'model_dim_num_heads_pair': (68, 1), 'inner_ff_dim_scale': 5, 'embedding_dimension': 5, 'dropout_rate': 0.13842016073467225, 'trainer:learning_rate': 0.00011764949128340636, 'trainer:epochs': 16, 'model_dim': 68, 'num_heads': 1}
+            
+ MASE MEAN: 2.4427349958080984 MASE STD: 0.41326844975955745
+            
+ sMAPE MEAN: 0.011073705940982287 sMAPE STD: 0.0018595857893714597
+            
+ RMSE MEAN: 120.5049764357215 RMSE STD: 23.04169112047968
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 115.80460882273333 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'model_dim_num_heads_pair': (27, 9), 'inner_ff_dim_scale': 3, 'embedding_dimension': 5, 'dropout_rate': 0.28357839578311317, 'trainer:learning_rate': 0.0004257307159423635, 'trainer:epochs': 57, 'model_dim': 27, 'num_heads': 9}
+            
+ MASE MEAN: 2.7192715369809073 MASE STD: 0.20871882404237652
+            
+ sMAPE MEAN: 0.01231852304137685 sMAPE STD: 0.0009383887237013
+            
+ RMSE MEAN: 128.85870694469708 RMSE STD: 8.57092286653926
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 24.067524729483345 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'num_layers': 5, 'hidden_dim_0': 98, 'hidden_dim_1': 68, 'hidden_dim_2': 92, 'hidden_dim_3': 83, 'hidden_dim_4': 99, 'trainer:learning_rate': 8.769357555728002e-05, 'trainer:epochs': 65, 'num_hidden_dimensions': [98, 68, 92, 83, 99]}
+            
+ MASE MEAN: 0.7244048223843362 MASE STD: 0.10368911920747954
+            
+ sMAPE MEAN: 0.003294366605802096 sMAPE STD: 0.0004740651752555498
+            
+ RMSE MEAN: 35.42345724052234 RMSE STD: 1.830392491533621
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 158.34038563241666 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'model_dim_num_heads_pair': (23, 1), 'inner_ff_dim_scale': 1, 'embedding_dimension': 10, 'dropout_rate': 0.022225154639012534, 'trainer:learning_rate': 1.2578955832779707e-05, 'trainer:epochs': 99, 'model_dim': 23, 'num_heads': 1}
+            
+ MASE MEAN: 4.452557332907882 MASE STD: 0.9400513899370797
+            
+ sMAPE MEAN: 0.020825515212502893 sMAPE STD: 0.00437770497912751
+            
+ RMSE MEAN: 212.63631349559984 RMSE STD: 35.71020536471609
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 13.073668209300013 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'num_layers': 2, 'hidden_dim_0': 52, 'hidden_dim_1': 87, 'trainer:learning_rate': 0.0006882590276605693, 'trainer:epochs': 24, 'num_hidden_dimensions': [52, 87]}
+            
+ MASE MEAN: 0.6945985471642292 MASE STD: 0.09121933177922109
+            
+ sMAPE MEAN: 0.0031583203473313204 sMAPE STD: 0.00041705767430741056
+            
+ RMSE MEAN: 35.24029087159754 RMSE STD: 2.124485267534183
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 93.77138643066665 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'model_dim_num_heads_pair': (26, 2), 'inner_ff_dim_scale': 5, 'embedding_dimension': 1, 'dropout_rate': 0.058280998781033655, 'trainer:learning_rate': 0.0003949300761485917, 'trainer:epochs': 11, 'model_dim': 26, 'num_heads': 2}
+            
+ MASE MEAN: 1.5605535104666968 MASE STD: 0.5521945470652592
+            
+ sMAPE MEAN: 0.007090720762021052 sMAPE STD: 0.0024970744360321225
+            
+ RMSE MEAN: 79.04739919994202 RMSE STD: 28.11249764254723
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 24.35598435123332 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'num_layers': 1, 'hidden_dim_0': 53, 'trainer:learning_rate': 0.00020674207392163156, 'trainer:epochs': 93, 'num_hidden_dimensions': [53]}
+            
+ MASE MEAN: 0.9067567534216547 MASE STD: 0.22527279967203875
+            
+ sMAPE MEAN: 0.004125682390658054 sMAPE STD: 0.0010260472139581715
+            
+ RMSE MEAN: 39.02460155444953 RMSE STD: 5.201409205625714
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 24.306130921849974 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'num_layers': 2, 'hidden_dim_0': 58, 'hidden_dim_1': 48, 'trainer:learning_rate': 3.0210999902477017e-05, 'trainer:epochs': 79, 'num_hidden_dimensions': [58, 48]}
+            
+ MASE MEAN: 2.7500141613575524 MASE STD: 0.4434626505761943
+            
+ sMAPE MEAN: 0.012454587049476676 sMAPE STD: 0.0019936569634525065
+            
+ RMSE MEAN: 129.54797440064453 RMSE STD: 13.400419315693366
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 102.14479819611664 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'trainer:learning_rate': 7.205711100423862e-05, 'trainer:epochs': 53}
+            
+ MASE MEAN: 2.2221612404456335 MASE STD: 0.11633497661300968
+            
+ sMAPE MEAN: 0.01008304940267927 sMAPE STD: 0.0005239887948602541
+            
+ RMSE MEAN: 110.63689080779235 RMSE STD: 10.088430597318887
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 22.83686209289996 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'num_layers': 1, 'hidden_dim_0': 42, 'trainer:learning_rate': 0.00028424883547474366, 'trainer:epochs': 41, 'num_hidden_dimensions': [42]}
+            
+ MASE MEAN: 2.086237505530774 MASE STD: 0.3867081781104609
+            
+ sMAPE MEAN: 0.009467505892887746 sMAPE STD: 0.0017424753976356497
+            
+ RMSE MEAN: 93.97189862917119 RMSE STD: 15.600584516121582
+            
+
+
+
+ feedforward no norm 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 31.03120356120004 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 81, 'hidden_dim_1': 35, 'hidden_dim_2': 44, 'hidden_dim_3': 19, 'trainer:learning_rate': 0.0003907193752239157, 'trainer:epochs': 90, 'num_hidden_dimensions': [81, 35, 44, 19]}
+            
+ MASE MEAN: 2.390652096958502 MASE STD: 0.507934824740848
+            
+ sMAPE MEAN: 0.010838568840571368 sMAPE STD: 0.002284610957328404
+            
+ RMSE MEAN: 106.14154558439063 RMSE STD: 22.286258422035683
+            
+
+
+
+ feedforward no norm 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 30.624189314583358 minutes 
+            
+ Prediction length: 14, Context length: 9
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 96, 'hidden_dim_1': 85, 'hidden_dim_2': 14, 'hidden_dim_3': 92, 'trainer:learning_rate': 0.0007915796371586921, 'trainer:epochs': 100, 'num_hidden_dimensions': [96, 85, 14, 92]}
+            
+ MASE MEAN: 0.6611766453969772 MASE STD: 0.07746789681051199
+            
+ sMAPE MEAN: 0.003005133571068816 sMAPE STD: 0.00035477442564344386
+            
+ RMSE MEAN: 39.36461215677538 RMSE STD: 4.781618385617771
+            
+
+
+
+ feedforward no norm 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 29.2283625643667 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'num_layers': 3, 'hidden_dim_0': 47, 'hidden_dim_1': 97, 'hidden_dim_2': 72, 'trainer:learning_rate': 5.7676106901861916e-05, 'trainer:epochs': 86, 'num_hidden_dimensions': [47, 97, 72]}
+            
+ MASE MEAN: 6.928578992731178 MASE STD: 0.8999657164936619
+            
+ sMAPE MEAN: 0.03251905836322304 sMAPE STD: 0.004314923261885983
+            
+ RMSE MEAN: 320.7526400305341 RMSE STD: 56.068056006675455
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 111.24653988494998 minutes 
+            
+ Prediction length: 14, Context length: 90
+            
+ Params: {'trainer:learning_rate': 0.00013203410685114775, 'trainer:epochs': 62}
+            
+ MASE MEAN: 2.203812562693915 MASE STD: 0.12958663187832994
+            
+ sMAPE MEAN: 0.010000394955797062 sMAPE STD: 0.0005838177048145454
+            
+ RMSE MEAN: 110.06775001196232 RMSE STD: 10.006432635635214
+            
+
+
+
+ feedforward no norm 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 28.83452563568335 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'num_layers': 2, 'hidden_dim_0': 94, 'hidden_dim_1': 21, 'trainer:learning_rate': 0.00021113656087680678, 'trainer:epochs': 69, 'num_hidden_dimensions': [94, 21]}
+            
+ MASE MEAN: 5.252783275153133 MASE STD: 0.3651097498607754
+            
+ sMAPE MEAN: 0.024548048124855632 sMAPE STD: 0.001717415083609881
+            
+ RMSE MEAN: 248.59366385445804 RMSE STD: 21.257976111011978
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 124.50677261883332 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'trainer:learning_rate': 0.0008152670867516138, 'trainer:epochs': 27}
+            
+ MASE MEAN: 5.494839371397789 MASE STD: 1.5163636802941154
+            
+ sMAPE MEAN: 0.025711049041095092 sMAPE STD: 0.007187300718976982
+            
+ RMSE MEAN: 244.7319639939683 RMSE STD: 98.71649453913074
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 362.74154688648326 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'model_dim_num_heads_pair': (84, 7), 'inner_ff_dim_scale': 1, 'embedding_dimension': 10, 'dropout_rate': 0.002369558633412816, 'trainer:learning_rate': 0.0005537211219145672, 'trainer:epochs': 39, 'model_dim': 84, 'num_heads': 7}
+            
+ MASE MEAN: 0.5217791252015683 MASE STD: 0.2534276711822357
+            
+ sMAPE MEAN: 0.004719417880163216 sMAPE STD: 0.0022988589140606874
+            
+ RMSE MEAN: 0.5922395772526702 RMSE STD: 0.27699021983503497
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 345.74633759431657 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'model_dim_num_heads_pair': (92, 2), 'inner_ff_dim_scale': 2, 'embedding_dimension': 5, 'dropout_rate': 0.1730146999568462, 'trainer:learning_rate': 0.00037446427524947813, 'trainer:epochs': 19, 'model_dim': 92, 'num_heads': 2}
+            
+ MASE MEAN: 0.7394753066544019 MASE STD: 0.20392195657257717
+            
+ sMAPE MEAN: 0.0066573178594845905 sMAPE STD: 0.001826602692570118
+            
+ RMSE MEAN: 0.7734015657981615 RMSE STD: 0.20399101321595806
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 46.51359108753338 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 28, 'hidden_dim_1': 84, 'hidden_dim_2': 24, 'hidden_dim_3': 79, 'trainer:learning_rate': 0.0003584344344419278, 'trainer:epochs': 53, 'num_hidden_dimensions': [28, 84, 24, 79]}
+            
+ MASE MEAN: 0.3184004829982807 MASE STD: 0.07691064746417704
+            
+ sMAPE MEAN: 0.002878553805680227 sMAPE STD: 0.0006964545717948117
+            
+ RMSE MEAN: 0.37078370667891436 RMSE STD: 0.08800668802823547
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 44.33788171585002 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'num_layers': 1, 'hidden_dim_0': 53, 'trainer:learning_rate': 8.897302521981405e-06, 'trainer:epochs': 41, 'num_hidden_dimensions': [53]}
+            
+ MASE MEAN: 0.4958317789590331 MASE STD: 0.1019626367214362
+            
+ sMAPE MEAN: 0.004486764899721312 sMAPE STD: 0.0009255005952245614
+            
+ RMSE MEAN: 0.5753392811489015 RMSE STD: 0.11417787112551991
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 586.7765690404334 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'trainer:learning_rate': 0.00038260995323691953, 'trainer:epochs': 40}
+            
+ MASE MEAN: 0.24304186364979138 MASE STD: 0.01924857659684728
+            
+ sMAPE MEAN: 0.002197132986718221 sMAPE STD: 0.00017381727006021773
+            
+ RMSE MEAN: 0.2913535176524683 RMSE STD: 0.010346142168903992
+            
+
+
+
+ feedforward no norm 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 43.93707958828333 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'num_layers': 3, 'hidden_dim_0': 69, 'hidden_dim_1': 57, 'hidden_dim_2': 30, 'trainer:learning_rate': 0.0006062081475480474, 'trainer:epochs': 90, 'num_hidden_dimensions': [69, 57, 30]}
+            
+ MASE MEAN: 0.48866664597126375 MASE STD: 0.0753159059536086
+            
+ sMAPE MEAN: 0.004421223336628304 sMAPE STD: 0.0006829381639827405
+            
+ RMSE MEAN: 0.5734613330501201 RMSE STD: 0.08966097063379204
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 720.8961023594 minutes 
+            
+ Prediction length: 78, Context length: 390
+            
+ Params: {'trainer:learning_rate': 0.000424150761880993, 'trainer:epochs': 67}
+            
+ MASE MEAN: 0.27577658871872285 MASE STD: 0.049285121937518724
+            
+ sMAPE MEAN: 0.0024924027436712044 sMAPE STD: 0.0004444594019800323
+            
+ RMSE MEAN: 0.31886733755448043 RMSE STD: 0.04450875508310753
+            
+
+
+
+ feedforward no norm 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 28.80574198248311 minutes 
+            
+ Prediction length: 12, Context length: 390
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 65, 'hidden_dim_1': 37, 'hidden_dim_2': 42, 'hidden_dim_3': 42, 'trainer:learning_rate': 0.0009518992410037182, 'trainer:epochs': 99, 'num_hidden_dimensions': [65, 37, 42, 42]}
+            
+ MASE MEAN: 0.16974876093463598 MASE STD: 0.06045700814770609
+            
+ sMAPE MEAN: 0.0015270799642269693 sMAPE STD: 0.0005445027201331455
+            
+ RMSE MEAN: 0.19848052666555957 RMSE STD: 0.0659840792456948
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on sp500 original_values data form, Runtime: 361.65967755804985 minutes 
+            
+ Prediction length: 12, Context length: 390
+            
+ Params: {'trainer:learning_rate': 0.00022658001870333602, 'trainer:epochs': 54}
+            
+ MASE MEAN: 1.6248503324493093 MASE STD: 0.0
+            
+ sMAPE MEAN: 0.014387538035710653 sMAPE STD: 0.0
+            
+ RMSE MEAN: 1.4670660678431147 RMSE STD: 0.07620229878218603
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on sp500 original_values data form, Runtime: 459.6022722904665 minutes 
+            
+ Prediction length: 12, Context length: 390
+            
+ Params: {'trainer:learning_rate': 4.118319641865005e-05, 'trainer:epochs': 76}
+            
+ MASE MEAN: 1.6248503324493093 MASE STD: 0.0
+            
+ sMAPE MEAN: 0.014387538035710653 sMAPE STD: 0.0
+            
+ RMSE MEAN: 1.8514769998013498 RMSE STD: 0.9134437785585775
+            
+
+
+
+ feedforward no norm 15 tuning trials 5 repeat test evals on m4_daily_dataset fd_target_values data form, Runtime: 33.08102055188333 minutes 
+            
+ Prediction length: 140, Context length: 90
+            
+ Params: {'num_layers': 3, 'hidden_dim_0': 14, 'hidden_dim_1': 97, 'hidden_dim_2': 50, 'trainer:learning_rate': 3.5969361346858945e-06, 'trainer:epochs': 91, 'num_hidden_dimensions': [14, 97, 50]}
+            
+ MASE MEAN: 8.927642959908635 MASE STD: 3.5855709066436723
+            
+ sMAPE MEAN: 0.04218789340820668 sMAPE STD: 0.017619582011744458
+            
+ RMSE MEAN: 418.2503758554132 RMSE STD: 160.85731744868707
+            
+
+
+
+ feedforward 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 26.13872645536667 minutes 
+            
+ Prediction length: 12, Context length: 390
+            
+ Params: {'num_layers': 4, 'hidden_dim_0': 99, 'hidden_dim_1': 58, 'hidden_dim_2': 29, 'hidden_dim_3': 48, 'trainer:learning_rate': 0.00093482090508556, 'trainer:epochs': 75, 'num_hidden_dimensions': [99, 58, 29, 48]}
+            
+ MASE MEAN: 0.5514385603144388 MASE STD: 0.49004022401212843
+            
+ sMAPE MEAN: 0.004979079622279928 sMAPE STD: 0.004441200050452399
+            
+ RMSE MEAN: 0.5786065751951548 RMSE STD: 0.49244800155286184
+            
+
+
+
+ wavenet 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 345.40116987736667 minutes 
+            
+ Prediction length: 12, Context length: 390
+            
+ Params: {'trainer:learning_rate': 0.0008427363137429142, 'trainer:epochs': 40}
+            
+ MASE MEAN: 0.3508722407232929 MASE STD: 0.014615681740391795
+            
+ sMAPE MEAN: 0.003149429153590018 sMAPE STD: 0.0001308973893904212
+            
+ RMSE MEAN: 0.38370831303524994 RMSE STD: 0.03008543167545651
+            
+
+
+
+ transformer 15 tuning trials 5 repeat test evals on sp500 fd_target_values data form, Runtime: 460.28014016166657 minutes 
+            
+ Prediction length: 12, Context length: 390
+            
+ Params: {'model_dim_num_heads_pair': (81, 9), 'inner_ff_dim_scale': 1, 'embedding_dimension': 4, 'dropout_rate': 0.44677326027506803, 'trainer:learning_rate': 0.0005981609026913976, 'trainer:epochs': 82, 'model_dim': 81, 'num_heads': 9}
+            
+ MASE MEAN: 0.2530378720554904 MASE STD: 0.12164107755592954
+            
+ sMAPE MEAN: 0.002276137973079414 sMAPE STD: 0.0010954073825740177
+            
+ RMSE MEAN: 0.2730049959006605 RMSE STD: 0.1313856495252719
+            

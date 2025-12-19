@@ -1,0 +1,1 @@
+[{"dataset": "SP500", "form": "original", "pl": 780, "mase": 1.599762315430107}, {"dataset": "SP500", "form": "original fd supp", "pl": 780, "mase": 1.0414825372619916}, {"dataset": "SP500", "form": "fd", "pl": 780, "mase": 2.4291874053055733}]

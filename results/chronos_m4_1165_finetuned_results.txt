@@ -1,0 +1,9 @@
+[{"dataset": "m4_1165", "form": "original", "pl": 140, "mase": 0.3541371510470883}, {"dataset": "m4_1165", "form": "original fd supp", "pl": 140, "mase": 0.30751237168864864}, {"dataset": "m4_1165", "form": "fd", "pl": 140, "mase": 0.27355764791930726}, {"dataset": "m4_1165", "form": "original", "pl": 700, "mase": 0.276468738371778}, {"dataset": "m4_1165", "form": "original fd supp", "pl": 700, "mase": 0.25585037366830105}, {"dataset": "m4_1165", "form": "fd", "pl": 700, "mase": 2.507416175236824}, {'dataset': 'm4_1165',
+  'form': 'original',
+  'pl': 14,
+  'mase': 0.22937299568354272},
+ {'dataset': 'm4_1165',
+  'form': 'original fd supp',
+  'pl': 14,
+  'mase': 0.16372191295734845},
+ {'dataset': 'm4_1165', 'form': 'fd', 'pl': 14, 'mase': 0.17671155876463362}]
